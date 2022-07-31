@@ -1,0 +1,1 @@
+[slug 与 url 优化 – 就是这个范儿 (thisfaner.com)](https://www.thisfaner.com/p/slug-url-seo/)

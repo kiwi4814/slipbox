@@ -1,0 +1,18 @@
+{
+  "promptDelete": false,
+  "alwaysUpdateLinks": true,
+  "showLineNumber": false,
+  "trashOption": "system",
+  "attachmentFolderPath": "Sources",
+  "showUnsupportedFiles": true,
+  "newFileLocation": "current",
+  "pdfExportSettings": {
+    "pageSize": "A4",
+    "landscape": false,
+    "margin": "0",
+    "downscalePercent": 100
+  },
+  "legacyEditor": false,
+  "livePreview": true,
+  "spellcheck": true
+}

@@ -1,0 +1,14 @@
+{
+  "items": [
+    {
+      "type": "file",
+      "title": "以windows的形式理解Linux",
+      "path": "StructureNotes/03@程序员随笔/以windows的形式理解Linux.md"
+    },
+    {
+      "type": "file",
+      "title": "再读JDK8中的函数式编程",
+      "path": "FleetingNotes/再读JDK8中的函数式编程.md"
+    }
+  ]
+}
