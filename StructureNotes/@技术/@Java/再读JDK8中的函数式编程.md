@@ -1,18 +1,16 @@
 
 
-用了好几年的JDK8，类似stream流、lambda等语法都用的“炉火纯青”了，却仍然还是免不了有时候还是需要检索一些复杂的语法，比如`flatmap`、`mapreduce`等平时很少用到的语法。想起来自己也好像只是粗略的读过，于是有了这篇文章，再这次重新去了解JDK8的过程中，简要记录了一些知识要点以及疑惑。
+用了好几年的JDK8 “函数式编程”，类似stream流、lambda等语法都用的“炉火纯青”了，却仍然还是免不了有时候还是需要检索一些复杂的语法，比如`flatmap`、`mapreduce`等平时很少用到的语法。想起来自己也好像只是粗略的读过，并没有任何精读，于是便有了这篇文章，在这次重新去了解函数式编程的过程中，记录了一些知识要点以及疑惑。
 
 
 
 如果想要完整的了解JDK8的新特性，推荐[读这里](https://wizardforcel.gitbooks.io/java8-new-features/content/index.html)。当然在下文中也会摘录很多其他文章，都是在看的过程中针对自己的疑问检索的，对相关章节感兴趣的也可以跳转查看。
 
-
-
 ## 1. 函数式编程
 
 
 
-对于函数式编程，能讲的有很多，我自己也没有完全理解（或者说完全没理解），想要深入研究的小伙伴可以参见[函数式编程指北](https://llh911001.gitbooks.io/mostly-adequate-guide-chinese/content/)。
+对于函数式编程，能讲的有很多，我自己也没有完全理解，想要深入研究的小伙伴可以参见[函数式编程指北](https://llh911001.gitbooks.io/mostly-adequate-guide-chinese/content/)。
 
 
 
@@ -28,7 +26,7 @@
 
 
 
-> 来自《架构整洁之道》
+> 扩展阅读 —— 《架构整洁之道》对于这几种编程方式的总结
 >
 > - 结构化编程是对程序控制权的直接转移的限制（Structured programming is discipline imposed upon direct transfer  of control.）
 > - 面向对象编程是对程序控制权的间接转移的限制（Object-oriented programming is discipline imposed upon indirect transfer  of control.）
@@ -38,7 +36,7 @@
 
 ## 2.函数式接口
 
-### `default`方法
+### default方法
 
 在说函数式接口之前，我觉得有必要说说Java8中新增的关键字 —— default。其定义很简单，接口可以有默认的实现，不需要其实现类去实现这个方法，只需要在这个方法之前加上default关键字即可。
 
@@ -52,7 +50,7 @@
 
 
 
-我们知道接口中的方法一定是抽象的，默认情况下可以省略 public 和 abstract 。平时在开发功能的时候，一般会在一个接口中定义不少抽象方法（拿一个最简单的功能来说至少有增删改查对吧），但是假如说，现在我们定义了一个接口，里面只包含一个抽象方法，那么这个接口就可以被称为函数式接口（**Functional Interface**），也被叫做单抽象方法接口（SAM, **Single Abstract Method interfaces**）。
+我们知道接口中的方法一定是抽象的，默认情况下可以省略 public 和 abstract 。平时在开发功能的时候，一般会在一个接口中定义不少抽象方法（拿一个最简单的功能来说至少有增删改查对吧），但是如果我们定义一个仅包含单个抽象方法的接口，那么这个接口就可以被称为函数式接口（**Functional Interface**），也叫做单抽象方法接口（SAM, **Single Abstract Method interfaces**）。
 
 
 
@@ -161,7 +159,7 @@ Comparator<Student> comparator8 = Comparator.comparing(JbxxVO::getId);
 
 注意到其中的区别了吗，其中comparator1的写法是完整的，`(String o1, String o2)`代表函数的入参，箭头符号 `->` 则是固定的格式，后面的`{}`括起来的部分则是函数的方法体。
 
-而第二种则表明入参的类型是可以省略的，方法体如果只有一行，那么`{}`也是可以省略的。
+而第二种写法则表明入参的类型是可以省略的，而且如果方法体只有一行，那么`{}`也是可以省略的。
 
 
 
@@ -182,6 +180,8 @@ Comparator<Student> comparator8 = Comparator.comparing(JbxxVO::getId);
 3. 如果是构造函数，则是 `ClassName::new`，如`Student::new`
 
 ### effectively final
+
+我们知道lambda表达式中如果要使用局部变量的话，这个变量必须是最终（final）或者有效最终（effectively final）的，关于这一点，具体篇幅的展开可以查看上一篇博文。
 
 
 

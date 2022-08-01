@@ -159,3 +159,4 @@ public void instanceVariableMultithreading() {
 
 ## 总结
 
+Java8 限制lambda表达式中使用的局部变量必须是最终或者有效最终，是因为任何在该lambda类中使用的变量都会通过自动生成的构造函数复制一份新的变量，为了保证这种同步性并且防止引起不必要的并发问题，所以做此限制。
