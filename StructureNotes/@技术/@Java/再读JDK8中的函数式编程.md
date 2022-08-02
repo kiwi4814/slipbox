@@ -1,3 +1,14 @@
++++
+title = "再读JDK8中的函数式编程"
+date = 2022-07-26 21:40:15
+slug = "/java8-functional-programming"
+draft = false
+tags = ["技术","Java 8"]
+categories = ["Java"]
+toc = false
+
++++
+
 
 
 用了好几年的JDK8 “函数式编程”，类似stream流、lambda等语法都用的“炉火纯青”了，却仍然还是免不了有时候还是需要检索一些复杂的语法，比如`flatmap`、`mapreduce`等平时很少用到的语法。想起来自己也好像只是粗略的读过，并没有任何精读，于是便有了这篇文章，在这次重新去了解函数式编程的过程中，记录了一些知识要点以及疑惑。
@@ -123,6 +134,10 @@ TestInterface i = (a, b) -> a + b;
 int sum = i.add(1, 3);
 ```
 
+
+
+另外，JDK8本身新增了四个函数式接口，
+
 ### 参考文档
 
 1. [Java Default Methods](https://howtodoinjava.com/java8/default-methods-in-java-8/)
@@ -179,7 +194,7 @@ Comparator<Student> comparator8 = Comparator.comparing(JbxxVO::getId);
 2. 如果是实例方法，则 是 `Instance::methodName` ，如`Object obj=new Object(); obj::equals; `
 3. 如果是构造函数，则是 `ClassName::new`，如`Student::new`
 
-### effectively final
+### 有效最终（effectively final）
 
 我们知道lambda表达式中如果要使用局部变量的话，这个变量必须是最终（final）或者有效最终（effectively final）的，关于这一点，具体篇幅的展开可以查看上一篇博文。
 
@@ -187,17 +202,12 @@ Comparator<Student> comparator8 = Comparator.comparing(JbxxVO::getId);
 
 
 
-
-
 ### 参考文档
 
-1. [Difference between final and effectively final - Stack Overflow](https://stackoverflow.com/questions/20938095/difference-between-final-and-effectively-final)
-2. [Why Do We Need Effectively Final?](https://www.baeldung.com/java-lambda-effectively-final-local-variables)
-3. [Lambda Expressions and Functional Interfaces: Tips and Best Practices](https://www.baeldung.com/java-8-lambda-expressions-tips)
-4. [Java8 函数编程](https://pdai.tech/md/java/java8/java8-stream.html)
-5. [Chapter 15. Expressions (oracle.com)](https://docs.oracle.com/javase/specs/jls/se8/html/jls-15.html#jls-15.27.2)
+1. [Lambda Expressions and Functional Interfaces: Tips and Best Practices](https://www.baeldung.com/java-8-lambda-expressions-tips)
+2. [Expressions (jsl-15)](https://docs.oracle.com/javase/specs/jls/se8/html/jls-15.html#jls-15.27.2)
 
-## 5. stream流
+## 4. stream流
 
 
 
@@ -209,75 +219,13 @@ Comparator<Student> comparator8 = Comparator.comparing(JbxxVO::getId);
 
 
 
-### 
-
-https://stackoverflow.com/questions/20938095/difference-between-final-and-effectively-final
 
 
 
 
 
-```JAVA
-public class LocalClassExample {
-  
-    static String regularExpression = "[^0-9]";
-  
-    public static void validatePhoneNumber(
-        String phoneNumber1, String phoneNumber2) {
-      
-        final int numberLength = 10;
-        
-        // Valid in JDK 8 and later:
-       
-        // int numberLength = 10;
-       
-        class PhoneNumber {
-            
-            String formattedPhoneNumber = null;
 
-            PhoneNumber(String phoneNumber){
-                // numberLength = 7;
-                String currentNumber = phoneNumber.replaceAll(
-                  regularExpression, "");
-                if (currentNumber.length() == numberLength)
-                    formattedPhoneNumber = currentNumber;
-                else
-                    formattedPhoneNumber = null;
-            }
 
-            public String getNumber() {
-                return formattedPhoneNumber;
-            }
-            
-            // Valid in JDK 8 and later:
 
-//            public void printOriginalNumbers() {
-//                System.out.println("Original numbers are " + phoneNumber1 +
-//                    " and " + phoneNumber2);
-//            }
-        }
 
-        PhoneNumber myNumber1 = new PhoneNumber(phoneNumber1);
-        PhoneNumber myNumber2 = new PhoneNumber(phoneNumber2);
-        
-        // Valid in JDK 8 and later:
-
-//        myNumber1.printOriginalNumbers();
-
-        if (myNumber1.getNumber() == null) 
-            System.out.println("First number is invalid");
-        else
-            System.out.println("First number is " + myNumber1.getNumber());
-        if (myNumber2.getNumber() == null)
-            System.out.println("Second number is invalid");
-        else
-            System.out.println("Second number is " + myNumber2.getNumber());
-
-    }
-
-    public static void main(String... args) {
-        validatePhoneNumber("123-456-7890", "456-7890");
-    }
-}
-```
 
