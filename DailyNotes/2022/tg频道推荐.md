@@ -251,3 +251,39 @@
   
 
 做完这次的频道分享之后，后面应该要很久才会有下次了，也可能没有下次了。更多频道推荐可见链接的上一处。
+
+
+
+Minimalist Emoji Packs:
+
+  
+
+😀 t.me/addemoji/popular_characters
+
+  
+
+👍 t.me/addemoji/popular_logos
+
+  
+
+💻 t.me/addemoji/computer_hardware
+
+  
+
+🔗 t.me/addemoji/network_emojis
+
+  
+
+💳 t.me/addemoji/ecommerce_emojis
+
+  
+
+🪴 t.me/addemoji/diy_doityourself
+
+  
+
+🩺 t.me/addemoji/healthcare_emojis
+
+  
+
+🎮 t.me/addemoji/gaming_emojis
