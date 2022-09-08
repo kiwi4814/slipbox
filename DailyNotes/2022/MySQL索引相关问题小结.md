@@ -12,7 +12,9 @@
 
 2. 索引的一些原则
 
-3. 
+3. `select * from T where k between 3 and 5`
+
+4. 
 
 
 

@@ -2,7 +2,7 @@
   "baseFontSize": 16,
   "cssTheme": "Obsidianite",
   "baseFontSizeAction": false,
-  "translucency": true,
+  "translucency": false,
   "interfaceFontFamily": "",
   "monospaceFontFamily": "Fira Mono for Powerline"
 }
