@@ -1,5 +1,5 @@
-常用命令
-Linux更新及安装命令
+### 常用命令
+#### Linux更新及安装命令
 
 Debian更新：apt-get update && apt-get upgrade
 Centos更新：yum update
@@ -12,7 +12,7 @@ Centos安装wget：yum install wget
 
 Centos安装XZ压缩工具：yum install xz
 
-Debian/Ubuntu 基础命令
+#### Debian/Ubuntu 基础命令
 
 更新软件源：apt-get update
 更新升级所有软件：apt-get upgrade
@@ -41,7 +41,7 @@ echo "net.ipv4.tcp_congestion_control=bbr" >> /etc/sysctl.conf
 sysctl -p
 lsmod | grep bbr
 
-Linux 常用的一键脚本
+#### Linux 常用的一键脚本
 V2ray-agent
 
 Github地址：https://github.com/mack-a/v2ray-agent
