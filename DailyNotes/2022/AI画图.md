@@ -5,7 +5,7 @@ Date: 2022-09-09 10:38:40
 	- Date : 2022-09-09 10:38:40
 	- DailyNotes : [[2022-09-09_周五]]
 	- Link : 
-	- Tag : #ZK卡片 #AI
+	- Tag : #ZK卡片 #AI #AI绘图 
 
 今天玩了一下 AI 绘画，用的比较火的 [Midjourney](https://discord.com/invite/midjourney)，在它 Discord 的子频道 newbies 输入命令 /imagine 然后键入关键词就行。
 
@@ -22,7 +22,10 @@ Date: 2022-09-09 10:38:40
 最近[有人用 AI 画作二创得奖](https://www.163.com/dy/article/HGJAFGIF051492T3.html)，AI 画作网站也出现不少，比如 [DreamStudio](https://beta.dreamstudio.ai/) ，Stable Diffusion 等，可以玩玩。AI 画作称不上艺术，不过可以作为人类想象力的延伸。
 
 
+### 在线体验
+[文心大模型 - 产业级知识增强大模型 (baidu.com)](https://wenxin.baidu.com/moduleApi/ernieVilg)
 
+https://art.elbo.ai/
 
 
 ### 相关链接
