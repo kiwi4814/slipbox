@@ -1,0 +1,191 @@
+{
+  "main": {
+    "id": "fac35d9bb79b94c5",
+    "type": "split",
+    "children": [
+      {
+        "id": "b1867295928cd549",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "f9d7fa6e309197e2",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "DailyNotes/2022/主要电影公司.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "487f326607d3a799",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "DailyNotes/2022/2022-10-17_周一.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "238fb827ec66f22d",
+    "type": "split",
+    "children": [
+      {
+        "id": "5e1dbbf837edc761",
+        "type": "tabs",
+        "dimension": 80.03992015968063,
+        "children": [
+          {
+            "id": "cca705104098a645",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "32e169817bd76654",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "在线之家",
+                "matchingCase": true,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "f17af43ee234048b",
+            "type": "leaf",
+            "state": {
+              "type": "starred",
+              "state": {}
+            }
+          }
+        ]
+      },
+      {
+        "id": "5720a22bc52fb7ac",
+        "type": "tabs",
+        "dimension": 19.96007984031936,
+        "children": [
+          {
+            "id": "7bc2a2ccbd2c8864",
+            "type": "leaf",
+            "state": {
+              "type": "recent-files",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 453.50000190734863
+  },
+  "right": {
+    "id": "c7261a80116f9a9b",
+    "type": "split",
+    "children": [
+      {
+        "id": "daf944394bf3b5bc",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "114fa9404198f33b",
+            "type": "leaf",
+            "state": {
+              "type": "calendar",
+              "state": {}
+            }
+          },
+          {
+            "id": "d8d48e0f90fca658",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "DailyNotes/2022/2022-10-17_周一.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "0ccb3f542dafc7ea",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "DailyNotes/2022/2022-10-17_周一.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "5c39f18c47a5bbda",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "604a42a545f18b10",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "DailyNotes/2022/2022-10-17_周一.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "ribbon": {
+    "mostRecentAction": ""
+  },
+  "active": "487f326607d3a799",
+  "lastOpenFiles": [
+    "DailyNotes/2022/中文词典.md",
+    "DailyNotes/2022/中秋节的起源.md",
+    "DailyNotes/2022/中秋节.md",
+    "DailyNotes/2022/中国古代的灵兽.md",
+    "DailyNotes/2022/中国古代藏书浩劫.md",
+    "DailyNotes/2022/这几年，这些电影消失了.md",
+    "DailyNotes/2022/伍德氏灯.md",
+    "DailyNotes/2022/维基百科离线版.md",
+    "DailyNotes/2022/团队开发规范包括什么？.md",
+    "DailyNotes/2022/腾讯云服务器安装MySQL 5.7.md"
+  ]
+}

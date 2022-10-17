@@ -4,5 +4,6 @@
   "baseFontSizeAction": false,
   "translucency": false,
   "interfaceFontFamily": "",
-  "monospaceFontFamily": "Fira Mono for Powerline"
+  "monospaceFontFamily": "Fira Mono for Powerline",
+  "accentColor": ""
 }
