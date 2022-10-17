@@ -49,7 +49,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "在线之家",
+                "query": "阿里云",
                 "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -66,7 +66,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       },
       {
         "id": "5720a22bc52fb7ac",
@@ -164,15 +165,15 @@
   },
   "active": "487f326607d3a799",
   "lastOpenFiles": [
-    "DailyNotes/2022/Jrebel&Xrebel破解.md",
+    "DailyNotes/2022/将文本转换为旁白 elai.io.md",
     "DailyNotes/2022/2022-10-17_周一.md",
+    "DailyNotes/2022/阿里云资源合集.md",
+    "DailyNotes/2022/2022.08/2022-08-12_周五.md",
+    "DailyNotes/2022/Jrebel&Xrebel破解.md",
     "DailyNotes/2022/主要电影公司.md",
     "DailyNotes/2022/中文词典.md",
     "DailyNotes/2022/中秋节的起源.md",
     "DailyNotes/2022/中秋节.md",
-    "DailyNotes/2022/中国古代的灵兽.md",
-    "DailyNotes/2022/中国古代藏书浩劫.md",
-    "DailyNotes/2022/这几年，这些电影消失了.md",
-    "DailyNotes/2022/伍德氏灯.md"
+    "DailyNotes/2022/中国古代的灵兽.md"
   ]
 }
