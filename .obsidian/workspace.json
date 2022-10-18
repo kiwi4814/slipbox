@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "DailyNotes/2022/万神殿.md",
+                "file": "DailyNotes/2022/2022-10-18_周二.md",
                 "mode": "source",
                 "source": false
               }
@@ -110,7 +110,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "DailyNotes/2022/万神殿.md",
+                "file": "DailyNotes/2022/2022-10-18_周二.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -127,7 +127,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "DailyNotes/2022/万神殿.md",
+                "file": "DailyNotes/2022/2022-10-18_周二.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -150,7 +150,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "DailyNotes/2022/万神殿.md"
+                "file": "DailyNotes/2022/2022-10-18_周二.md"
               }
             }
           }
@@ -165,6 +165,7 @@
   },
   "active": "487f326607d3a799",
   "lastOpenFiles": [
+    "DailyNotes/2022/万神殿.md",
     "DailyNotes/2022/2022-10-17_周一.md",
     "DailyNotes/2022/将文本转换为旁白 elai.io.md",
     "DailyNotes/2022/阿里云资源合集.md",
@@ -173,7 +174,6 @@
     "DailyNotes/2022/主要电影公司.md",
     "DailyNotes/2022/中文词典.md",
     "DailyNotes/2022/中秋节的起源.md",
-    "DailyNotes/2022/中秋节.md",
-    "DailyNotes/2022/中国古代的灵兽.md"
+    "DailyNotes/2022/中秋节.md"
   ]
 }
