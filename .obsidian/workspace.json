@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "DailyNotes/2022/2022-10-19_周三.md",
+                "file": "DailyNotes/2022/TVBOX.md",
                 "mode": "source",
                 "source": false
               }
@@ -110,7 +110,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "DailyNotes/2022/2022-10-19_周三.md",
+                "file": "DailyNotes/2022/TVBOX.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -127,7 +127,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "DailyNotes/2022/2022-10-19_周三.md",
+                "file": "DailyNotes/2022/TVBOX.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -150,7 +150,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "DailyNotes/2022/2022-10-19_周三.md"
+                "file": "DailyNotes/2022/TVBOX.md"
               }
             }
           }
@@ -165,8 +165,8 @@
   },
   "active": "487f326607d3a799",
   "lastOpenFiles": [
-    "DailyNotes/2022/IDEA重新格式化配置.md",
     "DailyNotes/2022/2022-10-19_周三.md",
+    "DailyNotes/2022/IDEA重新格式化配置.md",
     "ReadingNotes/极客时间/设计模式之美/20@让你最快速的改善代码编程质量的20条规范.md",
     "DailyNotes/2022/2022.08/2022-08-01_周一.md",
     "StructureNotes/@软件/IDEA/IDEA Git窗口恢复.md",
