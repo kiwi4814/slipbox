@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "StructureNotes/@技术/@Java/Java8 相关代码片段.md",
+                "file": "DailyNotes/2022/2022-10-19_周三.md",
                 "mode": "source",
                 "source": false
               }
@@ -49,7 +49,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "groupingB",
+                "query": "IDEA",
                 "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -110,7 +110,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "StructureNotes/@技术/@Java/Java8 相关代码片段.md",
+                "file": "DailyNotes/2022/2022-10-19_周三.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -127,7 +127,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "StructureNotes/@技术/@Java/Java8 相关代码片段.md",
+                "file": "DailyNotes/2022/2022-10-19_周三.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -150,7 +150,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "StructureNotes/@技术/@Java/Java8 相关代码片段.md"
+                "file": "DailyNotes/2022/2022-10-19_周三.md"
               }
             }
           }
@@ -165,15 +165,15 @@
   },
   "active": "487f326607d3a799",
   "lastOpenFiles": [
-    "StructureNotes/@吃喝玩乐/@食谱/卤牛肉.md",
+    "DailyNotes/2022/IDEA重新格式化配置.md",
     "DailyNotes/2022/2022-10-19_周三.md",
+    "ReadingNotes/极客时间/设计模式之美/20@让你最快速的改善代码编程质量的20条规范.md",
+    "DailyNotes/2022/2022.08/2022-08-01_周一.md",
+    "StructureNotes/@软件/IDEA/IDEA Git窗口恢复.md",
+    "StructureNotes/@软件/IDEA/IDEA安装插件后无法启动.md",
+    "StructureNotes/@技术/@Java/Java8 相关代码片段.md",
+    "StructureNotes/@吃喝玩乐/@食谱/卤牛肉.md",
     "DailyNotes/2022/2022-10-18_周二.md",
-    "DailyNotes/2022/万神殿.md",
-    "DailyNotes/2022/2022-10-17_周一.md",
-    "DailyNotes/2022/将文本转换为旁白 elai.io.md",
-    "DailyNotes/2022/阿里云资源合集.md",
-    "DailyNotes/2022/2022.08/2022-08-12_周五.md",
-    "DailyNotes/2022/Jrebel&Xrebel破解.md",
-    "DailyNotes/2022/主要电影公司.md"
+    "DailyNotes/2022/万神殿.md"
   ]
 }
