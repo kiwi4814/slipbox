@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "StructureNotes/@吃喝玩乐/@食谱/卤牛肉.md",
+                "file": "StructureNotes/@技术/@Java/Java computeIfPresent.md",
                 "mode": "source",
                 "source": false
               }
@@ -49,7 +49,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "牛肉",
+                "query": "merge",
                 "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -66,7 +66,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       },
       {
         "id": "5720a22bc52fb7ac",
@@ -109,7 +110,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "StructureNotes/@吃喝玩乐/@食谱/卤牛肉.md",
+                "file": "StructureNotes/@技术/@Java/Java computeIfPresent.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -126,7 +127,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "StructureNotes/@吃喝玩乐/@食谱/卤牛肉.md",
+                "file": "StructureNotes/@技术/@Java/Java computeIfPresent.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -149,7 +150,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "StructureNotes/@吃喝玩乐/@食谱/卤牛肉.md"
+                "file": "StructureNotes/@技术/@Java/Java computeIfPresent.md"
               }
             }
           }
@@ -162,11 +163,11 @@
   "ribbon": {
     "mostRecentAction": ""
   },
-  "active": "cca705104098a645",
+  "active": "487f326607d3a799",
   "lastOpenFiles": [
+    "StructureNotes/@吃喝玩乐/@食谱/卤牛肉.md",
     "DailyNotes/2022/阿里云资源合集.md",
     "DailyNotes/2022/2022-10-20_周四.md",
-    "StructureNotes/@吃喝玩乐/@食谱/卤牛肉.md",
     "DailyNotes/2022/2022-10-17_周一.md",
     "DailyNotes/2022/2022-10-18_周二.md",
     "DailyNotes/2022/2022-10-19_周三.md",
