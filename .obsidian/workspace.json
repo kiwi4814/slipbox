@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "DailyNotes/2022/阿里云资源合集.md",
+                "file": "FleetingNotes/网页剪藏/others/CPU历史之旅--回望过去的脚步.md",
                 "mode": "source",
                 "source": false
               }
@@ -49,9 +49,9 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "merge",
+                "query": "浮点",
                 "matchingCase": true,
-                "explainSearch": false,
+                "explainSearch": true,
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical"
@@ -110,7 +110,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "DailyNotes/2022/阿里云资源合集.md",
+                "file": "FleetingNotes/网页剪藏/others/CPU历史之旅--回望过去的脚步.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -127,7 +127,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "DailyNotes/2022/阿里云资源合集.md",
+                "file": "FleetingNotes/网页剪藏/others/CPU历史之旅--回望过去的脚步.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -150,7 +150,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "DailyNotes/2022/阿里云资源合集.md"
+                "file": "FleetingNotes/网页剪藏/others/CPU历史之旅--回望过去的脚步.md"
               }
             }
           }
@@ -165,15 +165,15 @@
   },
   "active": "487f326607d3a799",
   "lastOpenFiles": [
-    "DailyNotes/2022/2022-10-20_周四.md",
-    "DailyNotes/2022/2022-10-19_周三.md",
+    "ReadingNotes/技术类/软件设计师/第一章 计算机系统基础知识/1.1.3 数据表示.md",
     "DailyNotes/2022/2022-10-21_周五.md",
     "DailyNotes/2022/阿里云资源合集.md",
+    "DailyNotes/2022/2022-10-20_周四.md",
+    "DailyNotes/2022/2022-10-19_周三.md",
     "StructureNotes/@技术/@Java/Java computeIfPresent.md",
     "StructureNotes/@吃喝玩乐/@食谱/卤牛肉.md",
     "DailyNotes/2022/2022-10-17_周一.md",
     "DailyNotes/2022/2022-10-18_周二.md",
-    "DailyNotes/2022/TVBOX.md",
-    "DailyNotes/2022/IDEA重新格式化配置.md"
+    "DailyNotes/2022/TVBOX.md"
   ]
 }
