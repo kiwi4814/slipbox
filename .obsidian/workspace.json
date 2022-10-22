@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "FleetingNotes/网页剪藏/others/CPU历史之旅--回望过去的脚步.md",
+                "file": "DailyNotes/2022/2022-10-22_周六.md",
                 "mode": "source",
                 "source": false
               }
@@ -110,7 +110,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "FleetingNotes/网页剪藏/others/CPU历史之旅--回望过去的脚步.md",
+                "file": "DailyNotes/2022/2022-10-22_周六.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -127,7 +127,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "FleetingNotes/网页剪藏/others/CPU历史之旅--回望过去的脚步.md",
+                "file": "DailyNotes/2022/2022-10-22_周六.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -150,7 +150,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "FleetingNotes/网页剪藏/others/CPU历史之旅--回望过去的脚步.md"
+                "file": "DailyNotes/2022/2022-10-22_周六.md"
               }
             }
           }
@@ -165,6 +165,7 @@
   },
   "active": "487f326607d3a799",
   "lastOpenFiles": [
+    "FleetingNotes/网页剪藏/others/CPU历史之旅--回望过去的脚步.md",
     "ReadingNotes/技术类/软件设计师/第一章 计算机系统基础知识/1.1.3 数据表示.md",
     "DailyNotes/2022/2022-10-21_周五.md",
     "DailyNotes/2022/阿里云资源合集.md",
@@ -173,7 +174,6 @@
     "StructureNotes/@技术/@Java/Java computeIfPresent.md",
     "StructureNotes/@吃喝玩乐/@食谱/卤牛肉.md",
     "DailyNotes/2022/2022-10-17_周一.md",
-    "DailyNotes/2022/2022-10-18_周二.md",
-    "DailyNotes/2022/TVBOX.md"
+    "DailyNotes/2022/2022-10-18_周二.md"
   ]
 }
