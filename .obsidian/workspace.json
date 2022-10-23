@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "DailyNotes/2022/Jrebel&Xrebel破解.md",
+                "file": "DailyNotes/2022/在线影视.md",
                 "mode": "source",
                 "source": false
               }
@@ -49,7 +49,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "阿里云",
+                "query": "在线影视",
                 "matchingCase": true,
                 "explainSearch": true,
                 "collapseAll": false,
@@ -66,7 +66,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       },
       {
         "id": "5720a22bc52fb7ac",
@@ -109,7 +110,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "DailyNotes/2022/Jrebel&Xrebel破解.md",
+                "file": "DailyNotes/2022/在线影视.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -126,7 +127,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "DailyNotes/2022/Jrebel&Xrebel破解.md",
+                "file": "DailyNotes/2022/在线影视.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -149,7 +150,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "DailyNotes/2022/Jrebel&Xrebel破解.md"
+                "file": "DailyNotes/2022/在线影视.md"
               }
             }
           }
@@ -164,6 +165,8 @@
   },
   "active": "487f326607d3a799",
   "lastOpenFiles": [
+    "DailyNotes/2022/链接收藏.md",
+    "DailyNotes/2022/Jrebel&Xrebel破解.md",
     "DailyNotes/2022/tg频道推荐.md",
     "DailyNotes/2022/Krisp.md",
     "DailyNotes/2022/2022-10-23_周日.md",
@@ -171,8 +174,6 @@
     "DailyNotes/2022/2022.08/2022-08-12_周五.md",
     "DailyNotes/2022/2022-10-22_周六.md",
     "FleetingNotes/网页剪藏/others/CPU历史之旅--回望过去的脚步.md",
-    "ReadingNotes/技术类/软件设计师/第一章 计算机系统基础知识/1.1.3 数据表示.md",
-    "DailyNotes/2022/2022-10-21_周五.md",
-    "DailyNotes/2022/2022-10-20_周四.md"
+    "ReadingNotes/技术类/软件设计师/第一章 计算机系统基础知识/1.1.3 数据表示.md"
   ]
 }
