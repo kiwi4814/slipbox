@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "StructureNotes/@技术/@MySQL/腾讯云服务器安装MySQL 5.7.md",
+                "file": "StructureNotes/@技术/@Java/再读JDK8中的函数式编程.md",
                 "mode": "source",
                 "source": false
               }
@@ -109,7 +109,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "StructureNotes/@技术/@MySQL/腾讯云服务器安装MySQL 5.7.md",
+                "file": "StructureNotes/@技术/@Java/再读JDK8中的函数式编程.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -126,7 +126,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "StructureNotes/@技术/@MySQL/腾讯云服务器安装MySQL 5.7.md",
+                "file": "StructureNotes/@技术/@Java/再读JDK8中的函数式编程.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -149,7 +149,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "StructureNotes/@技术/@MySQL/腾讯云服务器安装MySQL 5.7.md"
+                "file": "StructureNotes/@技术/@Java/再读JDK8中的函数式编程.md"
               }
             }
           }
@@ -162,17 +162,17 @@
   "ribbon": {
     "mostRecentAction": ""
   },
-  "active": "7bc2a2ccbd2c8864",
+  "active": "cca705104098a645",
   "lastOpenFiles": [
-    "DailyNotes/2022/团队开发规范包括什么？.md",
+    "StructureNotes/@技术/@Java/为什么lambda表达式中的局部变量必须是有效或者最终有效的？.md",
+    "StructureNotes/@技术/@Java/再读JDK8中的函数式编程.md",
+    "StructureNotes/@在线工具/在线小工具.md",
     "StructureNotes/@技术/@MySQL/腾讯云服务器安装MySQL 5.7.md",
+    "DailyNotes/2022/团队开发规范包括什么？.md",
     "DailyNotes/2022/柿子脱涩.md",
     "DailyNotes/2022/日本动画公司盘点.md",
     "DailyNotes/2022/你的夏天还好吗？.md",
     "DailyNotes/2022/免费的在线博物馆.md",
-    "DailyNotes/2022/临时邮箱服务.md",
-    "DailyNotes/2022/凉拌海蜇.md",
-    "DailyNotes/2022/链接收藏.md",
-    "DailyNotes/2022/老残游记.md"
+    "DailyNotes/2022/临时邮箱服务.md"
   ]
 }
