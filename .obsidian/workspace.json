@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "DailyNotes/2022/2022-10-24_周一.md",
+                "file": "StructureNotes/@技术/@MySQL/腾讯云服务器安装MySQL 5.7.md",
                 "mode": "source",
                 "source": false
               }
@@ -109,7 +109,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "DailyNotes/2022/2022-10-24_周一.md",
+                "file": "StructureNotes/@技术/@MySQL/腾讯云服务器安装MySQL 5.7.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -126,7 +126,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "DailyNotes/2022/2022-10-24_周一.md",
+                "file": "StructureNotes/@技术/@MySQL/腾讯云服务器安装MySQL 5.7.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -149,7 +149,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "DailyNotes/2022/2022-10-24_周一.md"
+                "file": "StructureNotes/@技术/@MySQL/腾讯云服务器安装MySQL 5.7.md"
               }
             }
           }
@@ -162,17 +162,17 @@
   "ribbon": {
     "mostRecentAction": ""
   },
-  "active": "cca705104098a645",
+  "active": "7bc2a2ccbd2c8864",
   "lastOpenFiles": [
+    "DailyNotes/2022/团队开发规范包括什么？.md",
+    "StructureNotes/@技术/@MySQL/腾讯云服务器安装MySQL 5.7.md",
+    "DailyNotes/2022/柿子脱涩.md",
+    "DailyNotes/2022/日本动画公司盘点.md",
+    "DailyNotes/2022/你的夏天还好吗？.md",
+    "DailyNotes/2022/免费的在线博物馆.md",
+    "DailyNotes/2022/临时邮箱服务.md",
+    "DailyNotes/2022/凉拌海蜇.md",
     "DailyNotes/2022/链接收藏.md",
-    "DailyNotes/2022/Jrebel&Xrebel破解.md",
-    "DailyNotes/2022/tg频道推荐.md",
-    "DailyNotes/2022/Krisp.md",
-    "DailyNotes/2022/2022-10-23_周日.md",
-    "DailyNotes/2022/阿里云资源合集.md",
-    "DailyNotes/2022/2022.08/2022-08-12_周五.md",
-    "DailyNotes/2022/2022-10-22_周六.md",
-    "FleetingNotes/网页剪藏/others/CPU历史之旅--回望过去的脚步.md",
-    "ReadingNotes/技术类/软件设计师/第一章 计算机系统基础知识/1.1.3 数据表示.md"
+    "DailyNotes/2022/老残游记.md"
   ]
 }

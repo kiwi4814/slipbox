@@ -1,3 +1,13 @@
++++
+title = "Redis常用数据结构小结"
+date = 2022-09-11 22:50:47
+slug = "/redis-data-structures"
+draft = false
+tags = ["技术","Redis"]
+series = ["Redis实战"]
+toc = false
+
++++
 >  本文的内容为阅读笔记，主要内容源自[图解 Redis 数据结构](https://xiaolincoding.com/Redis/data_struct/data_struct.html)以及[Redis核心技术与实战 | 数据结构](https://time.geekbang.org/column/article/268253)，仅为了总结和方便理解。
 
 
