@@ -1,53 +1,40 @@
 {
   "main": {
-    "id": "042e17c3ae32fc91",
+    "id": "fac35d9bb79b94c5",
     "type": "split",
     "children": [
       {
-        "id": "305d5a4e9b034887",
+        "id": "b1867295928cd549",
         "type": "tabs",
         "children": [
           {
-            "id": "2dd0c317db2581d3",
+            "id": "487f326607d3a799",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "DailyNotes/2022/2022-10-14_周五.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "d1cfdbf518d05777",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "DailyNotes/2022/2022-10-24_周一.md",
+                "file": "DailyNotes/2022/在线影视.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
   },
   "left": {
-    "id": "0bbdf4f855c19c71",
+    "id": "238fb827ec66f22d",
     "type": "split",
     "children": [
       {
-        "id": "0218cde351660835",
+        "id": "5e1dbbf837edc761",
         "type": "tabs",
-        "dimension": 76.9455252918288,
+        "dimension": 80.03992015968063,
         "children": [
           {
-            "id": "9537c1ccaab728eb",
+            "id": "cca705104098a645",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -57,14 +44,14 @@
             }
           },
           {
-            "id": "747604e65d6cb628",
+            "id": "32e169817bd76654",
             "type": "leaf",
             "state": {
               "type": "search",
               "state": {
-                "query": "何安全地存储文",
-                "matchingCase": false,
-                "explainSearch": false,
+                "query": "在线影视",
+                "matchingCase": true,
+                "explainSearch": true,
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical"
@@ -72,7 +59,7 @@
             }
           },
           {
-            "id": "f45bbb5939d5af72",
+            "id": "f17af43ee234048b",
             "type": "leaf",
             "state": {
               "type": "starred",
@@ -83,12 +70,12 @@
         "currentTab": 1
       },
       {
-        "id": "3605a73a4167fbea",
+        "id": "5720a22bc52fb7ac",
         "type": "tabs",
-        "dimension": 23.054474708171206,
+        "dimension": 19.96007984031936,
         "children": [
           {
-            "id": "2a6e017e1e8a1552",
+            "id": "7bc2a2ccbd2c8864",
             "type": "leaf",
             "state": {
               "type": "recent-files",
@@ -99,18 +86,18 @@
       }
     ],
     "direction": "horizontal",
-    "width": 453.5
+    "width": 453.50000190734863
   },
   "right": {
-    "id": "8d25ef5a7a9baf2a",
+    "id": "c7261a80116f9a9b",
     "type": "split",
     "children": [
       {
-        "id": "cf6a0c6ad68fa42f",
+        "id": "daf944394bf3b5bc",
         "type": "tabs",
         "children": [
           {
-            "id": "b416640c58c7f3bc",
+            "id": "114fa9404198f33b",
             "type": "leaf",
             "state": {
               "type": "calendar",
@@ -118,12 +105,12 @@
             }
           },
           {
-            "id": "d861ebb3a30d653d",
+            "id": "d8d48e0f90fca658",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-                "file": "DailyNotes/2022/2022-10-24_周一.md",
+                "file": "DailyNotes/2022/在线影视.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -135,19 +122,19 @@
             }
           },
           {
-            "id": "c42c1b2c6342108b",
+            "id": "0ccb3f542dafc7ea",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "DailyNotes/2022/2022-10-24_周一.md",
+                "file": "DailyNotes/2022/在线影视.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
             }
           },
           {
-            "id": "6bcc222949f51966",
+            "id": "5c39f18c47a5bbda",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -158,12 +145,12 @@
             }
           },
           {
-            "id": "e790c438e9a5a938",
+            "id": "604a42a545f18b10",
             "type": "leaf",
             "state": {
               "type": "outline",
               "state": {
-                "file": "DailyNotes/2022/2022-10-24_周一.md"
+                "file": "DailyNotes/2022/在线影视.md"
               }
             }
           }
@@ -176,17 +163,17 @@
   "ribbon": {
     "mostRecentAction": ""
   },
-  "active": "d1cfdbf518d05777",
+  "active": "487f326607d3a799",
   "lastOpenFiles": [
-    "DailyNotes/2022/如何安全的存储文本？.md",
-    "DailyNotes/2022/2022-10-14_周五.md",
+    "DailyNotes/2022/链接收藏.md",
+    "DailyNotes/2022/Jrebel&Xrebel破解.md",
+    "DailyNotes/2022/tg频道推荐.md",
+    "DailyNotes/2022/Krisp.md",
+    "DailyNotes/2022/2022-10-23_周日.md",
     "DailyNotes/2022/阿里云资源合集.md",
     "DailyNotes/2022/2022.08/2022-08-12_周五.md",
-    "DailyNotes/2022/2022.10/2022-10-12_周三.md",
-    "DailyNotes/2022/2022.10/2022-10-13_周四.md",
-    "DailyNotes/2022/2022-10-13_周四.md",
-    "DailyNotes/2022/2022-08-12_周五.md",
-    "DailyNotes/2022/导航网站收录.md",
-    "DailyNotes/2022/简悦 · 配置库 Obsidian 版.md"
+    "DailyNotes/2022/2022-10-22_周六.md",
+    "FleetingNotes/网页剪藏/others/CPU历史之旅--回望过去的脚步.md",
+    "ReadingNotes/技术类/软件设计师/第一章 计算机系统基础知识/1.1.3 数据表示.md"
   ]
 }
