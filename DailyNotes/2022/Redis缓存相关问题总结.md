@@ -1,5 +1,19 @@
 
 
++++
+
+title = "Redis缓存相关问题总结"
+date = 2022-09-12 08:50:47
+slug = "/redis-cache"
+draft = false
+tags = ["技术","Redis"]
+series = ["Redis实战"]
+toc = false
+
++++
+
+
+
 > 本文为阅读笔记，主要内容源自极客时间蒋德均老师的《Redis核心技术与实战》。
 
 我们知道，我们使用Redis的主要用途就是做缓存，一般来说，根据Redis缓存是否接受读写请求，我们可以把它分为只读缓存和读写缓存。

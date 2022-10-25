@@ -1,3 +1,21 @@
+
+
++++
+
+title = "Redis实战之分布式锁"
+date = 2022-09-13 20:13:58
+slug = "/redis-distributed-locks"
+draft = false
+tags = ["技术","Redis"]
+series = ["Redis实战"]
+toc = false
+
++++
+
+
+
+
+
 接下来的几篇文章，会学习一下Redis除了用做缓存之外的一些实际使用方法。这篇文章主要探讨了分布式锁的几种实现机制和原理。
 
 
@@ -115,5 +133,5 @@ end
 
 ## 基于客户端的实现方式
 
-
+待续..
 
