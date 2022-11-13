@@ -1886,6 +1886,7 @@ var require_lib = __commonJS({
       }
       this.timeout = opts.timeout || AsyncLock2.DEFAULT_TIMEOUT;
       this.maxOccupationTime = opts.maxOccupationTime || AsyncLock2.DEFAULT_MAX_OCCUPATION_TIME;
+      this.maxExecutionTime = opts.maxExecutionTime || AsyncLock2.DEFAULT_MAX_EXECUTION_TIME;
       if (opts.maxPending === Infinity || Number.isInteger(opts.maxPending) && opts.maxPending >= 0) {
         this.maxPending = opts.maxPending;
       } else {
@@ -1894,6 +1895,7 @@ var require_lib = __commonJS({
     };
     AsyncLock2.DEFAULT_TIMEOUT = 0;
     AsyncLock2.DEFAULT_MAX_OCCUPATION_TIME = 0;
+    AsyncLock2.DEFAULT_MAX_EXECUTION_TIME = 0;
     AsyncLock2.DEFAULT_MAX_PENDING = 1e3;
     AsyncLock2.prototype.acquire = function(key2, fn, cb, opts) {
       if (Array.isArray(key2)) {
@@ -1917,11 +1919,16 @@ var require_lib = __commonJS({
       var resolved = false;
       var timer = null;
       var occupationTimer = null;
+      var executionTimer = null;
       var self3 = this;
       var done = function(locked, err, ret) {
         if (occupationTimer) {
           clearTimeout(occupationTimer);
           occupationTimer = null;
+        }
+        if (executionTimer) {
+          clearTimeout(executionTimer);
+          executionTimer = null;
         }
         if (locked) {
           if (!!self3.queues[key2] && self3.queues[key2].length === 0) {
@@ -1961,6 +1968,14 @@ var require_lib = __commonJS({
         }
         if (self3.domainReentrant && locked) {
           self3.domains[key2] = process.domain;
+        }
+        var maxExecutionTime = opts.maxExecutionTime || self3.maxExecutionTime;
+        if (maxExecutionTime) {
+          executionTimer = setTimeout(function() {
+            if (!!self3.queues[key2]) {
+              done(locked, new Error("Maximum execution time is exceeded " + key2));
+            }
+          }, maxExecutionTime);
         }
         if (fn.length === 1) {
           var called = false;
@@ -19625,10 +19640,10 @@ var IsomorphicGit = class extends GitManager {
       fs: this.fs,
       dir: this.plugin.settings.basePath,
       onAuth: () => {
-        var _a2;
+        var _a2, _b;
         return {
-          username: this.plugin.settings.username,
-          password: (_a2 = this.plugin.localStorage.getPassword()) != null ? _a2 : void 0
+          username: (_a2 = this.plugin.localStorage.getUsername()) != null ? _a2 : void 0,
+          password: (_b = this.plugin.localStorage.getPassword()) != null ? _b : void 0
         };
       },
       onAuthFailure: async () => {
@@ -19637,8 +19652,7 @@ var IsomorphicGit = class extends GitManager {
         if (username) {
           const password = await new GeneralModal({ placeholder: "Specify your password/personal access token" }).open();
           if (password) {
-            this.plugin.settings.username = username;
-            await this.plugin.saveSettings();
+            this.plugin.localStorage.setUsername(username);
             this.plugin.localStorage.setPassword(password);
             return {
               username,
@@ -19683,17 +19697,22 @@ var IsomorphicGit = class extends GitManager {
     }
   }
   async status() {
-    const notice = new import_obsidian5.Notice("Getting status...", this.noticeLength);
+    let notice;
+    const timeout = window.setTimeout(function() {
+      notice = new import_obsidian5.Notice("This takes longer: Getting status", this.noticeLength);
+    }, 2e4);
     try {
       this.plugin.setState(PluginState.status);
       const status2 = (await this.wrapFS(isomorphic_git_default.statusMatrix({ ...this.getRepo() }))).map((row) => this.getFileStatusResult(row));
       const changed = status2.filter((fileStatus) => fileStatus.working_dir !== " ");
       const staged = status2.filter((fileStatus) => fileStatus.index !== " " && fileStatus.index !== "U");
       const conflicted = [];
-      notice.hide();
+      window.clearTimeout(timeout);
+      notice == null ? void 0 : notice.hide();
       return { changed, staged, conflicted };
     } catch (error) {
-      notice.hide();
+      window.clearTimeout(timeout);
+      notice == null ? void 0 : notice.hide();
       this.plugin.displayError(error);
       throw error;
     }
@@ -19831,7 +19850,7 @@ var IsomorphicGit = class extends GitManager {
     return this.wrapFS(isomorphic_git_default.resolveRef({ ...this.getRepo(), ref }));
   }
   async pull() {
-    const progressNotice = new import_obsidian5.Notice("Initializing pull", this.noticeLength);
+    const progressNotice = this.showNotice("Initializing pull");
     try {
       this.plugin.setState(PluginState.pull);
       const localCommit = await this.resolveRef("HEAD");
@@ -19847,11 +19866,13 @@ var IsomorphicGit = class extends GitManager {
         ...this.getRepo(),
         ref: branchInfo.current,
         onProgress: (progress) => {
-          progressNotice.noticeEl.innerText = this.getProgressText("Checkout", progress);
+          if (progressNotice !== void 0) {
+            progressNotice.noticeEl.innerText = this.getProgressText("Checkout", progress);
+          }
         },
         remote: branchInfo.remote
       }));
-      progressNotice.hide();
+      progressNotice == null ? void 0 : progressNotice.hide();
       const upstreamCommit = await this.resolveRef("HEAD");
       this.plugin.lastUpdate = Date.now();
       const changedFiles = await this.getFileChangesCount(localCommit, upstreamCommit);
@@ -19863,7 +19884,7 @@ var IsomorphicGit = class extends GitManager {
         vault_path: this.getVaultPath(file.path)
       }));
     } catch (error) {
-      progressNotice.hide();
+      progressNotice == null ? void 0 : progressNotice.hide();
       if (error instanceof Errors.MergeConflictError) {
         this.plugin.handleConflict(error.data.filepaths.map((file) => this.getVaultPath(file)));
       }
@@ -19875,7 +19896,7 @@ var IsomorphicGit = class extends GitManager {
     if (!await this.canPush()) {
       return 0;
     }
-    const progressNotice = new import_obsidian5.Notice("Initializing push", this.noticeLength);
+    const progressNotice = this.showNotice("Initializing push");
     try {
       this.plugin.setState(PluginState.status);
       const status2 = await this.branchInfo();
@@ -19886,13 +19907,15 @@ var IsomorphicGit = class extends GitManager {
       await this.wrapFS(isomorphic_git_default.push({
         ...this.getRepo(),
         onProgress: (progress) => {
-          progressNotice.noticeEl.innerText = this.getProgressText("Pushing", progress);
+          if (progressNotice !== void 0) {
+            progressNotice.noticeEl.innerText = this.getProgressText("Pushing", progress);
+          }
         }
       }));
-      progressNotice.hide();
+      progressNotice == null ? void 0 : progressNotice.hide();
       return numChangedFiles;
     } catch (error) {
-      progressNotice.hide();
+      progressNotice == null ? void 0 : progressNotice.hide();
       this.plugin.displayError(error);
       throw error;
     }
@@ -19973,19 +19996,21 @@ var IsomorphicGit = class extends GitManager {
     }
   }
   async clone(url, dir) {
-    const progressNotice = new import_obsidian5.Notice("Initializing clone", this.noticeLength);
+    const progressNotice = this.showNotice("Initializing clone");
     try {
       await this.wrapFS(isomorphic_git_default.clone({
         ...this.getRepo(),
         dir,
         url,
         onProgress: (progress) => {
-          progressNotice.noticeEl.innerText = this.getProgressText("Cloning", progress);
+          if (progressNotice !== void 0) {
+            progressNotice.noticeEl.innerText = this.getProgressText("Cloning", progress);
+          }
         }
       }));
-      progressNotice.hide();
+      progressNotice == null ? void 0 : progressNotice.hide();
     } catch (error) {
-      progressNotice.hide();
+      progressNotice == null ? void 0 : progressNotice.hide();
       this.plugin.displayError(error);
       throw error;
     }
@@ -20014,26 +20039,28 @@ var IsomorphicGit = class extends GitManager {
     }
   }
   async fetch(remote) {
-    const progressNotice = new import_obsidian5.Notice("Initializing fetch", this.noticeLength);
+    const progressNotice = this.showNotice("Initializing fetch");
     try {
       const args = {
         ...this.getRepo(),
         onProgress: (progress) => {
-          progressNotice.noticeEl.innerText = this.getProgressText("Fetching", progress);
+          if (progressNotice !== void 0) {
+            progressNotice.noticeEl.innerText = this.getProgressText("Fetching", progress);
+          }
         },
         remote: remote != null ? remote : await this.getCurrentRemote()
       };
       await this.wrapFS(isomorphic_git_default.fetch(args));
-      progressNotice.hide();
+      progressNotice == null ? void 0 : progressNotice.hide();
     } catch (error) {
       this.plugin.displayError(error);
-      progressNotice.hide();
+      progressNotice == null ? void 0 : progressNotice.hide();
       throw error;
     }
   }
   async setRemote(name, url) {
     try {
-      await this.wrapFS(isomorphic_git_default.addRemote({ ...this.getRepo(), remote: name, url }));
+      await this.wrapFS(isomorphic_git_default.addRemote({ ...this.getRepo(), remote: name, url, force: true }));
     } catch (error) {
       this.plugin.displayError(error);
       throw error;
@@ -20122,7 +20149,10 @@ var IsomorphicGit = class extends GitManager {
     });
   }
   async getUnstagedFiles(base = ".") {
-    const notice = new import_obsidian5.Notice("Getting status...", this.noticeLength);
+    let notice;
+    const timeout = window.setTimeout(function() {
+      notice = new import_obsidian5.Notice("This takes longer: Getting status", this.noticeLength);
+    }, 2e4);
     try {
       const repo = this.getRepo();
       const res = await this.wrapFS(isomorphic_git_default.walk({
@@ -20174,10 +20204,12 @@ var IsomorphicGit = class extends GitManager {
           return null;
         }
       }));
-      notice.hide();
+      window.clearTimeout(timeout);
+      notice == null ? void 0 : notice.hide();
       return res;
     } catch (error) {
-      notice.hide();
+      window.clearTimeout(timeout);
+      notice == null ? void 0 : notice.hide();
       this.plugin.displayError(error);
       throw error;
     }
@@ -20220,6 +20252,11 @@ var IsomorphicGit = class extends GitManager {
       path: row[this.FILE],
       vault_path: this.getVaultPath(row[this.FILE])
     };
+  }
+  showNotice(message) {
+    if (!this.plugin.settings.disablePopups) {
+      return new import_obsidian5.Notice(message, this.noticeLength);
+    }
   }
 };
 function fromValue2(value) {
@@ -24058,7 +24095,14 @@ var SimpleGit = class extends GitManager {
         binary: this.plugin.localStorage.getGitPath() || void 0,
         config: ["core.quotepath=off"]
       });
-      this.git.cwd(await this.git.revparse("--show-toplevel"));
+      const env = this.plugin.localStorage.getPATHPaths();
+      if (env.length > 0) {
+        const path3 = process.env["PATH"] + ":" + env.join(":");
+        process.env["PATH"] = path3;
+      }
+      const debug2 = require_browser();
+      debug2.enable("simple-git");
+      await this.git.cwd(await this.git.revparse("--show-toplevel"));
     }
   }
   async status() {
@@ -24300,10 +24344,14 @@ var SimpleGit = class extends GitManager {
     await this.git.clone(url, path.join(this.app.vault.adapter.getBasePath(), dir), [], (err) => this.onError(err));
   }
   async setConfig(path2, value) {
-    await this.git.addConfig(path2, value, (err) => this.onError(err));
+    if (value == void 0) {
+      await this.git.raw(["config", "--local", "--unset", path2]);
+    } else {
+      await this.git.addConfig(path2, value, (err) => this.onError(err));
+    }
   }
   async getConfig(path2) {
-    const config = await this.git.listConfig((err) => this.onError(err));
+    const config = await this.git.listConfig("local", (err) => this.onError(err));
     return config.all[path2];
   }
   async fetch(remote) {
@@ -24377,7 +24425,7 @@ var SimpleGit = class extends GitManager {
   }
   onError(error) {
     if (error) {
-      const networkFailure = error.message.contains("Could not resolve host") || error.message.match(/ssh: connect to host .*? port .*?: Operation timed out/);
+      const networkFailure = error.message.contains("Could not resolve host") || error.message.match(/ssh: connect to host .*? port .*?: Operation timed out/) || error.message.match(/ssh: connect to host .*? port .*?: Network is unreachable/);
       if (!networkFailure) {
         this.plugin.displayError(error.message);
         this.plugin.setState(PluginState.idle);
@@ -24435,7 +24483,7 @@ var ObsidianGitSettingsTab = class extends import_obsidian7.PluginSettingTab {
           new import_obsidian7.Notice("Please specify a valid number.");
         }
       }));
-      new import_obsidian7.Setting(containerEl).setName(`If turned on, do auto ${commitOrBackup} every X minutes after last change. Prevents auto ${commitOrBackup} while editing a file. If turned off, do auto ${commitOrBackup} every X minutes. It's independent from last change.`).addToggle((toggle) => toggle.setValue(plugin.settings.autoBackupAfterFileChange).onChange((value) => {
+      new import_obsidian7.Setting(containerEl).setName(`Auto Backup after Filechange`).setDesc(`If turned on, do auto ${commitOrBackup} every ${plugin.settings.autoSaveInterval} minutes after last change. This also prevents auto ${commitOrBackup} while editing a file. If turned off, it's independent from last the change.`).addToggle((toggle) => toggle.setValue(plugin.settings.autoBackupAfterFileChange).onChange((value) => {
         plugin.settings.autoBackupAfterFileChange = value;
         plugin.saveSettings();
         plugin.clearAutoBackup();
@@ -24564,6 +24612,43 @@ var ObsidianGitSettingsTab = class extends import_obsidian7.PluginSettingTab {
       plugin.saveSettings();
     }));
     containerEl.createEl("br");
+    if (plugin.gitManager instanceof IsomorphicGit) {
+      containerEl.createEl("h3", { text: "Authentication/Commit Author" });
+    } else {
+      containerEl.createEl("h3", { text: "Commit Author" });
+    }
+    if (plugin.gitManager instanceof IsomorphicGit)
+      new import_obsidian7.Setting(containerEl).setName("Username on your git server. E.g. your username on GitHub").addText((cb) => {
+        var _a2;
+        cb.setValue((_a2 = plugin.localStorage.getUsername()) != null ? _a2 : "");
+        cb.onChange((value) => {
+          plugin.localStorage.setUsername(value);
+        });
+      });
+    if (plugin.gitManager instanceof IsomorphicGit)
+      new import_obsidian7.Setting(containerEl).setName("Password/Personal access token").setDesc("Type in your password. You won't be able to see it again.").addText((cb) => {
+        cb.inputEl.autocapitalize = "off";
+        cb.inputEl.autocomplete = "off";
+        cb.inputEl.spellcheck = false;
+        cb.onChange((value) => {
+          plugin.localStorage.setPassword(value);
+        });
+      });
+    if (gitReady)
+      new import_obsidian7.Setting(containerEl).setName("Author name for commit").addText(async (cb) => {
+        cb.setValue(await plugin.gitManager.getConfig("user.name"));
+        cb.onChange((value) => {
+          plugin.gitManager.setConfig("user.name", value == "" ? void 0 : value);
+        });
+      });
+    if (gitReady)
+      new import_obsidian7.Setting(containerEl).setName("Author email for commit").addText(async (cb) => {
+        cb.setValue(await plugin.gitManager.getConfig("user.email"));
+        cb.onChange((value) => {
+          plugin.gitManager.setConfig("user.email", value == "" ? void 0 : value);
+        });
+      });
+    containerEl.createEl("br");
     containerEl.createEl("h3", { text: "Advanced" });
     if (plugin.gitManager instanceof SimpleGit)
       new import_obsidian7.Setting(containerEl).setName("Update submodules").setDesc('"Create backup" and "pull" takes care of submodules. Missing features: Conflicted files, count of pulled/pushed/committed files. Tracking branch needs to be set for each submodule').addToggle((toggle) => toggle.setValue(plugin.settings.updateSubmodules).onChange((value) => {
@@ -24580,35 +24665,19 @@ var ObsidianGitSettingsTab = class extends import_obsidian7.PluginSettingTab {
           plugin.gitManager.updateGitPath(value || "git");
         });
       });
-    if (plugin.gitManager instanceof IsomorphicGit)
-      new import_obsidian7.Setting(containerEl).setName("Username on your git server. E.g. your username on GitHub").addText((cb) => {
-        cb.setValue(plugin.settings.username);
+    if (plugin.gitManager instanceof SimpleGit)
+      new import_obsidian7.Setting(containerEl).setName("Additional PATH environment variable paths").setDesc("Use each line for one path").addTextArea((cb) => {
+        cb.setValue(plugin.localStorage.getPATHPaths().join("\n"));
         cb.onChange((value) => {
-          plugin.settings.username = value;
-          plugin.saveSettings();
+          plugin.localStorage.setPATHPaths(value.split("\n"));
         });
       });
-    if (plugin.gitManager instanceof IsomorphicGit)
-      new import_obsidian7.Setting(containerEl).setName("Password/Personal access token").setDesc("Type in your password. You won't be able to see it again.").addText((cb) => {
-        cb.inputEl.autocapitalize = "off";
-        cb.inputEl.autocomplete = "off";
-        cb.inputEl.spellcheck = false;
-        cb.onChange((value) => {
-          plugin.localStorage.setPassword(value);
-        });
-      });
-    if (gitReady)
-      new import_obsidian7.Setting(containerEl).setName("Author name for commit").addText(async (cb) => {
-        cb.setValue(await plugin.gitManager.getConfig("user.name"));
-        cb.onChange((value) => {
-          plugin.gitManager.setConfig("user.name", value);
-        });
-      });
-    if (gitReady)
-      new import_obsidian7.Setting(containerEl).setName("Author email for commit").addText(async (cb) => {
-        cb.setValue(await plugin.gitManager.getConfig("user.email"));
-        cb.onChange((value) => {
-          plugin.gitManager.setConfig("user.email", value);
+    if (plugin.gitManager instanceof SimpleGit)
+      new import_obsidian7.Setting(containerEl).setName("Reload with new PATH environment variable").addButton((cb) => {
+        cb.setButtonText("Reload");
+        cb.setCta();
+        cb.onClick(() => {
+          plugin.gitManager.setGitInstance();
         });
       });
     new import_obsidian7.Setting(containerEl).setName("Custom base path (Git repository path)").setDesc(`
@@ -24852,7 +24921,6 @@ var DEFAULT_SETTINGS = {
   basePath: "",
   differentIntervalCommitAndPush: false,
   changedFilesInStatusBar: false,
-  username: "",
   showedMobileNotice: false,
   refreshSourceControlTimer: 7e3,
   showBranchStatusBar: true
@@ -24893,6 +24961,12 @@ var LocalStorageSettings = class {
   setPassword(value) {
     return app.saveLocalStorage(this.prefix + "password", value);
   }
+  getUsername() {
+    return app.loadLocalStorage(this.prefix + "username");
+  }
+  setUsername(value) {
+    return app.saveLocalStorage(this.prefix + "username", value);
+  }
   getHostname() {
     return app.loadLocalStorage(this.prefix + "hostname");
   }
@@ -24928,6 +25002,13 @@ var LocalStorageSettings = class {
   }
   setGitPath(value) {
     return app.saveLocalStorage(this.prefix + "gitPath", value);
+  }
+  getPATHPaths() {
+    var _a2, _b;
+    return (_b = (_a2 = app.loadLocalStorage(this.prefix + "PATHPaths")) == null ? void 0 : _a2.split(":")) != null ? _b : [];
+  }
+  setPATHPaths(value) {
+    return app.saveLocalStorage(this.prefix + "PATHPaths", value.join(":"));
   }
   getPluginDisabled() {
     return app.loadLocalStorage(this.prefix + "pluginDisabled") == "true";
@@ -30844,6 +30925,11 @@ var ObsidianGit = class extends import_obsidian23.Plugin {
     if (this.settings.gitPath != void 0) {
       this.localStorage.setGitPath(this.settings.gitPath);
       this.settings.gitPath = void 0;
+      await this.saveSettings();
+    }
+    if (this.settings.username != void 0) {
+      this.localStorage.setPassword(this.settings.username);
+      this.settings.username = void 0;
       await this.saveSettings();
     }
   }
