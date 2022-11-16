@@ -20080,7 +20080,8 @@ var IsomorphicGit = class extends GitManager {
     await this.wrapFS(isomorphic_git_default.deleteRemote({ ...this.getRepo(), remote: remoteName }));
   }
   async getRemoteUrl(remote) {
-    return (await this.wrapFS(isomorphic_git_default.listRemotes({ ...this.getRepo() }))).filter((item) => item.remote == remote)[0].url;
+    var _a2;
+    return (_a2 = (await this.wrapFS(isomorphic_git_default.listRemotes({ ...this.getRepo() }))).filter((item) => item.remote == remote)[0]) == null ? void 0 : _a2.url;
   }
   updateBasePath(basePath) {
     this.getRepo().dir = basePath;
@@ -23832,6 +23833,32 @@ function abortPlugin(signal) {
   };
   return [onSpawnBefore, onSpawnAfter];
 }
+function isConfigSwitch(arg) {
+  return arg.trim().toLowerCase() === "-c";
+}
+function preventProtocolOverride(arg, next) {
+  if (!isConfigSwitch(arg)) {
+    return;
+  }
+  if (!/^\s*protocol(.[a-z]+)?.allow/.test(next)) {
+    return;
+  }
+  throw new GitPluginError(void 0, "unsafe", "Configuring protocol.allow is not permitted without enabling allowUnsafeExtProtocol");
+}
+function blockUnsafeOperationsPlugin({
+  allowUnsafeProtocolOverride = false
+} = {}) {
+  return {
+    type: "spawn.args",
+    action(args, _context) {
+      args.forEach((current, index2) => {
+        const next = index2 < args.length ? args[index2 + 1] : "";
+        allowUnsafeProtocolOverride || preventProtocolOverride(current, next);
+      });
+      return args;
+    }
+  };
+}
 init_utils();
 function commandConfigPrefixingPlugin(configuration) {
   const prefix = prefixedArray(configuration, "-c");
@@ -24060,6 +24087,7 @@ function gitInstanceFactory(baseDir, options) {
   if (Array.isArray(config.config)) {
     plugins.add(commandConfigPrefixingPlugin(config.config));
   }
+  plugins.add(blockUnsafeOperationsPlugin(config.unsafe));
   plugins.add(completionDetectionPlugin(config.completion));
   config.abort && plugins.add(abortPlugin(config.abort));
   config.progress && plugins.add(progressMonitorPlugin(config.progress));
@@ -26838,7 +26866,9 @@ function insert(target, node, anchor) {
   target.insertBefore(node, anchor || null);
 }
 function detach(node) {
-  node.parentNode.removeChild(node);
+  if (node.parentNode) {
+    node.parentNode.removeChild(node);
+  }
 }
 function destroy_each(iterations, detaching) {
   for (let i = 0; i < iterations.length; i += 1) {
@@ -31551,20 +31581,6 @@ var ObsidianGit = class extends import_obsidian23.Plugin {
  * @author   Feross Aboukhadijeh <https://feross.org>
  * @license  MIT
  */
-/*! *****************************************************************************
-Copyright (c) Microsoft Corporation.
-
-Permission to use, copy, modify, and/or distribute this software for any
-purpose with or without fee is hereby granted.
-
-THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH
-REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY
-AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT,
-INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM
-LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR
-OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
-PERFORMANCE OF THIS SOFTWARE.
-***************************************************************************** */
 /*! crc32.js (C) 2014-present SheetJS -- http://sheetjs.com */
 /*! ieee754. BSD-3-Clause License. Feross Aboukhadijeh <https://feross.org/opensource> */
 /*! safe-buffer. MIT License. Feross Aboukhadijeh <https://feross.org/opensource> */
