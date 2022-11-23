@@ -50,3 +50,29 @@ http://2urmf2mk2dhmz4km522u4yfy2ynbzkbejf2cvmpcbzhpffvcuksrz6ad.onion/zlib-downl
 
 ### TG机器人
 @firstlibrarybot
+
+### 2022-11-23更新
+
+只要思想不滑坡，办法总比困难多
+http://kkd7tiqf5lv3olqfdnkw4znmmmmnjo2xqlxrp5ntthp6juowaiha.b32.i2p/
+
+（这个不是 Tor 链接，是 I2P 链接，Tor 打不开，具体可以去搜 I2P）
+
+
+#### Z-Library数据库种子磁力 
+the Pirate Library Mirror：http://pilimi.org/ 
+7TB图书种子打包：https://abskoop.lanzouj.com/iMFw007vcvpc 
+阿里云盘：https://www.aliyundrive.com/s/EpsgciDJ6ZX 阿里云盘解压密码：888888
+
+#### Z-Library电子书搜索引擎 
+Anna’s Archive：https://annas-archive.org/
+
+[Anna's Archive](https://annas-archive.org/) 备份 z-library 背后的团队，有多个第三方地下书库的下载资源，包括 libgen 和 z-lib。
+
+Z-Library 剩余团队的成员昨日在其暗网网站发表公开声明，回应了两位俄罗斯创始人被捕事件。声明称他们对 Anton 和 Valeriia 的被捕感到遗憾，他们也认识到其平台让部分图书作者受到伤害，因此请求他们的原谅，如果侵犯了作者的权利，他们将尽最大努力对侵权书籍的投诉做出反应。这意味着 Z-Library 将会在暗网继续运营。
+
+PS：根据消息，今天zlib的暗网地址也出现了访问困难现象，现在获取电子书的方式是越来越难了，大家好好珍惜吧。
+
+
+[Pirate Library Mirror 项目研究 - 知乎 (zhihu.com)](https://zhuanlan.zhihu.com/p/581483526)
+
