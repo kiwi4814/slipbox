@@ -76,3 +76,5 @@ PS：根据消息，今天zlib的暗网地址也出现了访问困难现象，�
 
 [Pirate Library Mirror 项目研究 - 知乎 (zhihu.com)](https://zhuanlan.zhihu.com/p/581483526)
 
+Resilio Sync：EI6YGJFY7ARIH43QPOE3CS2N6GVFHIG5SZRH3DMOD7GL4B2SN2XUEMDNRGI
+
