@@ -7,6 +7,23 @@ Date: 2022-09-09 10:38:40
 	- Link : 
 	- Tag : #ZK卡片 #AI #AI绘图 
 
+### 2022-11-25
+
+1、[Stable Diffusion](https://github.com/Stability-AI/stablediffusion)
+
+![img](https://kiwi4814-1256211473.cos.ap-nanjing.myqcloud.com//img202211251443920.webp)
+
+这是眼下最热门的 AI 作图模型，本周发布了[2.0版](https://stability.ai/blog/stable-diffusion-v2-release)。图片质量得到了提高，性能进行了优化。更重要的是，它只需要一个 GPU，家用 PC 就能运行。
+
+2、[Diffusion Bee](https://diffusionbee.com/)
+
+![img](https://kiwi4814-1256211473.cos.ap-nanjing.myqcloud.com//img202211251443972.webp)
+
+一个 MacOS 应用，将 Stable Diffusion 模型做成一个安装包，带有图形界面，号称是苹果电脑使用该模型的最容易方法。另有一个同类应用 [CHARL-E](https://www.charl-e.com/)，以及一个命令行应用 [ImaginAIry](https://github.com/brycedrennan/imaginAIry)。
+
+### older
+
+
 今天玩了一下 AI 绘画，用的比较火的 [Midjourney](https://discord.com/invite/midjourney)，在它 Discord 的子频道 newbies 输入命令 /imagine 然后键入关键词就行。
 
 
