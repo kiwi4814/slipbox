@@ -4,7 +4,7 @@
 
 
 
-![image-20221125133731203](https://kiwi4814-1256211473.cos.ap-nanjing.myqcloud.com//img202211251337871.webp)
+<img src="https://kiwi4814-1256211473.cos.ap-nanjing.myqcloud.com//img202211251337871.webp" alt="image-20221125133731203" style="zoom:25%;" />
 
 
 
@@ -40,7 +40,7 @@ TMM的官方下载地址为[tinyMediaManager-Download](https://www.tinymediamana
 
 
 
-![image-20221125133632270](https://kiwi4814-1256211473.cos.ap-nanjing.myqcloud.com//img202211251336769.webp)
+<img src="https://kiwi4814-1256211473.cos.ap-nanjing.myqcloud.com//img202211251336769.webp" alt="image-20221125133632270" style="zoom:25%;" />
 
 
 
@@ -48,7 +48,7 @@ TMM的官方下载地址为[tinyMediaManager-Download](https://www.tinymediamana
 
 
 
-![image-20221125134215676](https://kiwi4814-1256211473.cos.ap-nanjing.myqcloud.com//img202211251342562.webp)
+<img src="https://kiwi4814-1256211473.cos.ap-nanjing.myqcloud.com//img202211251342562.webp" alt="image-20221125134215676" style="zoom:25%;" />
 
 
 
@@ -56,7 +56,7 @@ TMM的官方下载地址为[tinyMediaManager-Download](https://www.tinymediamana
 
 
 
-![image-20221125134807317](https://kiwi4814-1256211473.cos.ap-nanjing.myqcloud.com//img202211251348162.webp)
+<img src="https://kiwi4814-1256211473.cos.ap-nanjing.myqcloud.com//img202211251348162.webp" alt="image-20221125134807317" style="zoom:25%;" />
 
 
 
@@ -66,16 +66,40 @@ TMM的官方下载地址为[tinyMediaManager-Download](https://www.tinymediamana
 
 ##### 命名的惯例
 
+<img src="https://kiwi4814-1256211473.cos.ap-nanjing.myqcloud.com//imgimgimage-20221125213517234.png" alt="image-20221125213517234" style="zoom:25%;" />
+
 ##### 重命名
 
 首先来看电影的刮削。
 
+<img src="https://kiwi4814-1256211473.cos.ap-nanjing.myqcloud.com//imgimage-20221125213829144.png" alt="image-20221125213829144" style="zoom:25%;" />
 
+在更新数据源之后，我们已经能看到上面的电影已经导入并且初始化了一些信息。
 
+<img src="https://kiwi4814-1256211473.cos.ap-nanjing.myqcloud.com//imgimage-20221125214020241.png" alt="image-20221125214020241" style="zoom:25%;" />
 
+选择自动匹配
+
+<img src="https://kiwi4814-1256211473.cos.ap-nanjing.myqcloud.com//imgimage-20221125214234216.png" alt="image-20221125214234216" style="zoom:25%;" />
+
+对于无法精准匹配的数据，TMM会弹出确认框可以手动检索和确认
+
+<img src="https://kiwi4814-1256211473.cos.ap-nanjing.myqcloud.com//imgimage-20221125215243620.png" alt="image-20221125215243620" style="zoom:25%;" />
+
+我们可以看到，除了国内电影的分级信息之外，其他的信息都已经抓取完毕，这时候我们查看电影的源文件的时候，发现多出了很多散乱的信息。
+
+<img src="https://kiwi4814-1256211473.cos.ap-nanjing.myqcloud.com//imgimage-20221125215412637.png" alt="image-20221125215412637" style="zoom:25%;" />
+
+这时候我们可以使用TMM的批量命名功能将其重新整理
+
+<img src="https://kiwi4814-1256211473.cos.ap-nanjing.myqcloud.com//imgimage-20221125215807758.png" alt="image-20221125215807758" style="zoom:25%;" />
 
 #### 电视剧
 
 ##### 命名的惯例
+
+<img src="https://kiwi4814-1256211473.cos.ap-nanjing.myqcloud.com//imgimage-20221125221635361.png" alt="image-20221125221635361" style="zoom:25%;" />
+
+
 
 ##### 批量改名法
