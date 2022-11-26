@@ -32,35 +32,23 @@ TMM的官方下载地址为[tinyMediaManager-Download](https://www.tinymediamana
 
 安装完成后首次打开会有设置向导，这里我们需要分别选择电影和电视剧的媒体源，即数据存储的位置，不选也没关系，我们后续可以在设置中选择。
 
+接下来我们看下软件的重要设置和基本功能。
 
+<img src="https://kiwi4814-1256211473.cos.ap-nanjing.myqcloud.com//imgimage-20221126180732718.png" alt="image-20221126180732718" style="zoom: 25%;" />
 
-#### 申请TMDB Api Key（可选项）
-
-在[TMDB官网](https://www.themoviedb.org/)注册后点击右上角头像，选择“账户设置”，然后在左侧菜单栏点击“API” - “请求API密钥”。
-
-
-
-<img src="https://kiwi4814-1256211473.cos.ap-nanjing.myqcloud.com//img202211251336769.webp" alt="image-20221125133632270" style="zoom:25%;" />
+如上图所示，软件的主体界面被分为四块区域，其中左下和右下区域分别是我们要刮削的电影（剧集）列表和具体到鼠标焦点下的指定电影（剧集）的详细信息；左上区域也就是操作区，这里对应着TMM的四大核心功能：读取（`更新源`）、刮削（`搜索&抓取`）、编辑（`编辑`）和整理（`重命名&清理`），这个后面我们拿实际的操作过程来演示这几个功能的主要用法；最后是右上的设置区，`设置`即打开软件的设置界面，`工具`下放了缓存、日志相关的一些调试工具，`关于`则是软件版本、帮助信息，最后`升级为Pro版`，相比于免费版本只能使用TMDB数据库刮削，Pro版本可以从更多的数据库下载封面、字幕以及预告片。
 
 
 
-点击后选择“Developer”，然后条款拉到最下面点击“接受”。
+下面我们看下设置界面。
 
 
 
-<img src="https://kiwi4814-1256211473.cos.ap-nanjing.myqcloud.com//img202211251342562.webp" alt="image-20221125134215676" style="zoom:25%;" />
 
 
 
-然后按照提示填写资料即可：
 
 
-
-<img src="https://kiwi4814-1256211473.cos.ap-nanjing.myqcloud.com//img202211251348162.webp" alt="image-20221125134807317" style="zoom:25%;" />
-
-
-
-在申请成功后跳转到的新页面上，就可以拿到“API 密钥 (v3 auth)”，即TMDB的Api Key。
 
 #### 电影
 
@@ -103,3 +91,34 @@ TMM的官方下载地址为[tinyMediaManager-Download](https://www.tinymediamana
 
 
 ##### 批量改名法
+
+
+
+
+#### 申请TMDB Api Key（可选项）
+
+在[TMDB官网](https://www.themoviedb.org/)注册后点击右上角头像，选择“账户设置”，然后在左侧菜单栏点击“API” - “请求API密钥”。
+
+
+
+<img src="https://kiwi4814-1256211473.cos.ap-nanjing.myqcloud.com//img202211251336769.webp" alt="image-20221125133632270" style="zoom:25%;" />
+
+
+
+点击后选择“Developer”，然后条款拉到最下面点击“接受”。
+
+
+
+<img src="https://kiwi4814-1256211473.cos.ap-nanjing.myqcloud.com//img202211251342562.webp" alt="image-20221125134215676" style="zoom:25%;" />
+
+
+
+然后按照提示填写资料即可：
+
+
+
+<img src="https://kiwi4814-1256211473.cos.ap-nanjing.myqcloud.com//img202211251348162.webp" alt="image-20221125134807317" style="zoom:25%;" />
+
+
+
+在申请成功后跳转到的新页面上，就可以拿到“API 密钥 (v3 auth)”，即TMDB的Api Key。
