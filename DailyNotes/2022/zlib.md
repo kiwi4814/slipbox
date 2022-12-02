@@ -81,3 +81,14 @@ Resilio Sync：EI6YGJFY7ARIH43QPOE3CS2N6GVFHIG5SZRH3DMOD7GL4B2SN2XUEMDNRGI
 ### 2022-11-29更新
 
 https://zlib.zu1k.com/
+
+### 2022-12-02更新
+🔎[Zlib Searcher](https://github.com/zu1k/zlib-searcher) - 一个开源的电子书的搜索引擎
+
+🏠[直接使用](https://zlib.knat.network/) | 🐳支持Docker
+
+📃你可以通过这个项目部署一个可以搜索Zlibrary和Library Genesis的引擎
+
+当然也可以使用上方链接直接使用开发者部署好的使用
+
+搜索速度非常快，并且支持多个地址下载
