@@ -42,7 +42,7 @@ TMM的官方下载地址为[tinyMediaManager-Download](https://www.tinymediamana
 
 下面我们看下设置界面。
 
-
+适当调整内存和并行下载数。
 
 
 
