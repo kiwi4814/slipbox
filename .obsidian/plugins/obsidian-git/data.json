@@ -12,7 +12,7 @@
   "listChangedFilesInMessageBody": true,
   "showStatusBar": false,
   "updateSubmodules": false,
-  "syncMethod": "merge",
+  "syncMethod": "rebase",
   "customMessageOnAutoBackup": false,
   "autoBackupAfterFileChange": true,
   "treeStructure": false,
