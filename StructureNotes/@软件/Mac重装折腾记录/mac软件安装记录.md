@@ -1,7 +1,7 @@
 ### 电脑设置
 
 - [x] 关闭 聚焦 搜索
-- [x] 查看隐藏文件（alfred workflow插件）****
+- [x] 查看隐藏文件（alfred workflow插件）
 
 ### 必备
 
@@ -21,7 +21,7 @@
 - [x] 微信
 - [x] 企业微信
 - [x] Telegram
-- [ ] easyconnect
+- [x] easyconnect
 
 ### 开发工具
 
@@ -33,7 +33,7 @@
 
 - [x] Homebrew
 
-- [ ] iTerm2
+- [x] iTerm2
 
 - [x] VS Code
 
@@ -41,14 +41,14 @@
 
 - [x] Navicat
 
-  
+- [ ] 
 
 
 
 ### 辅助工具类
 
-- [ ] Synergy
-- [x] PicGo
+- [x] Synergy
+- [x] PicGo(配置及关联typora)
 - [x] ScrollReverser
 - [x] iShot Pro（App Store）
 - [x] 超级右键（App Store）
