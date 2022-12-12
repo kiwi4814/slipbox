@@ -59,6 +59,7 @@
 - [x] 腾讯柠檬清理
 - [x] Eagle
 - [x] IINA
+- [x] AltTab
 
 ### 工具初始化
 

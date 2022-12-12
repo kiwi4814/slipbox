@@ -83,7 +83,8 @@ No analytics data has been sent yet (nor will any be during this install run).
 
 ```
 brew install node
-
+brew install maven
+brew install pandoc
 ```
 
 
