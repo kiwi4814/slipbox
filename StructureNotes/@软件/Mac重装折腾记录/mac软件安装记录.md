@@ -9,12 +9,10 @@
 - [x] Edge浏览器（各类插件数据同步）
 - [x] Google Drive同步
 - [x] Alfred 
-
 - [x] Bandizip（AppStore已付费）
 - [x] Bob（AppStore已付费）
 - [x] PDF Expert
 - [x] Office 365
-- [ ] 
 
 ### 通讯
 
@@ -41,7 +39,7 @@
 
 - [x] Navicat
 
-- [ ] 
+  
 
 
 
@@ -71,4 +69,4 @@
 
 #### Git
 
-- [ ] 为不同项目文件夹设置git用户名和邮箱
+- [x] 为不同项目文件夹设置git用户名和邮箱
