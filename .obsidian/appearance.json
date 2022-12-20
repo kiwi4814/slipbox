@@ -1,9 +1,10 @@
 {
   "baseFontSize": 16,
-  "cssTheme": "Obsidianite",
+  "cssTheme": "Minimal",
   "baseFontSizeAction": false,
   "translucency": false,
-  "interfaceFontFamily": "",
+  "interfaceFontFamily": "Source Han Serif TC,思源黑体",
   "monospaceFontFamily": "Fira Mono for Powerline",
-  "accentColor": ""
+  "accentColor": "",
+  "textFontFamily": "微软雅黑"
 }
