@@ -5,11 +5,11 @@
     "fontSize": 16,
     "iconColor": null,
     "recentlyUsedIcons": [
+      "🟠",
+      "🥠",
       "💟",
       "🔶",
-      "😈",
-      "✂",
-      "🖇"
+      "😈"
     ],
     "recentlyUsedIconsSize": 5,
     "rules": [],
@@ -39,6 +39,6 @@
   "StructureNotes/@游戏": "🎲",
   "StructureNotes/@资源": "🖇",
   "FleetingNotes/网页剪藏": "✂",
-  "LICENSE": "💟",
-  "README.md": "🔶"
+  "LICENSE": "🟠",
+  "README.md": "🥠"
 }
