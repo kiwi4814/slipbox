@@ -5,11 +5,11 @@
     "fontSize": 16,
     "iconColor": null,
     "recentlyUsedIcons": [
-      "✉",
-      "🇬🇹",
-      "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
-      "🧰",
-      "🇨🇳"
+      "💟",
+      "🔶",
+      "😈",
+      "✂",
+      "🖇"
     ],
     "recentlyUsedIconsSize": 5,
     "rules": [],
@@ -25,5 +25,20 @@
   "ReadingNotes": "🇨🇳",
   "Resources": "🧰",
   "StructureNotes": "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
-  "Templates": "🇬🇹"
+  "Templates": "🇬🇹",
+  "StructureNotes/@百科": "💯",
+  "StructureNotes/@吃喝玩乐": "🥩",
+  "StructureNotes/@工具": "🧰",
+  "StructureNotes/@技术": "☘",
+  "StructureNotes/@健康": "👨‍⚕️",
+  "StructureNotes/@考试": "🔯",
+  "StructureNotes/@历史": "✳",
+  "StructureNotes/@群晖": "📨",
+  "StructureNotes/@英语": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+  "StructureNotes/@影视": "🎞",
+  "StructureNotes/@游戏": "🎲",
+  "StructureNotes/@资源": "🖇",
+  "FleetingNotes/网页剪藏": "✂",
+  "LICENSE": "💟",
+  "README.md": "🔶"
 }
