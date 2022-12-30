@@ -92,3 +92,10 @@ https://zlib.zu1k.com/
 当然也可以使用上方链接直接使用开发者部署好的使用
 
 搜索速度非常快，并且支持多个地址下载
+
+### 2022-12-30更新
+Z-Library 的旧机器人已被封禁，请使用新的 Telegram 机器人。目前新机器人功能和旧版相同，可以通过 Z-Library 网站发送书籍。
+
+The old Telegram bot for Z-Library has been banned, please use the new bot. Currently the new bot's functions are the same as the old one, and can send books through the Z-Library website.
+
+@ZLibrary1_bot
