@@ -99,3 +99,16 @@ Z-Library 的旧机器人已被封禁，请使用新的 Telegram 机器人。目
 The old Telegram bot for Z-Library has been banned, please use the new bot. Currently the new bot's functions are the same as the old one, and can send books through the Z-Library website.
 
 @ZLibrary1_bot
+
+
+https://book-searcher.eu.org/
+
+https://zlib.knat.network/
+
+https://book.vergedx.me/
+
+https://zbook.lol/
+
+https://zlib.pseudoyu.com/
+
+https://read.liugezhou.online/
