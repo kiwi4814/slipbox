@@ -64,11 +64,7 @@ pip3 install powerline-status --user
 
 ### 三、iTerm2软件设置
 
-设置背景图片
-
-设置字体
-
-设置初始窗口大小
+主要是设置背景图片、设置字体、设置初始窗口大小等，参考下图设置即可。
 
 ![image-20230131154437054](https://kiwi4814-1256211473.cos.ap-nanjing.myqcloud.com/img/image-20230131154437054.webp)
 
