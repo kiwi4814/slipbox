@@ -160,6 +160,7 @@ Obsidian用来管理笔记，Typora用来写作。这两年市面上的笔记软
 - [x] 
 - [x] IINA
 - [x] AltTab
+- [ ] Motrix
 
 ### 工具初始化
 
