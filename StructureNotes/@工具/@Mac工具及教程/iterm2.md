@@ -2,17 +2,13 @@
 
 本文默认读者已经自行安装HomeBrew、Git以及Python等开发常用工具，另外笔者所用系统版本为 macOS Ventura 13.2。
 
-
-
-
-
 ### 一、iTerm2软件设置
 
-iTerm2的安装很简单，去[官网](https://iterm2.com/)下载或者使用Homebrew安装均可，这里不做展开，重点放在初始化的一些设置上。
+iTerm2的安装很简单，去[官网](https://iterm2.com/)下载或者使用HomBbrew安装均可，这里不做展开，将重点放在初始化的一些设置上。
 
 
 
-iTerm2的主要设置都在 Settings -> Profiles里面，打开后我们可以设置字体、配色方案、窗口样式、ssh等，并且可以导入导出为JSON（建议设置完成后导出进行备份）。
+iTerm2的主要设置都在 Settings -> Profiles里面，打开后可以设置字体、配色方案、窗口样式、ssh等，并且可以导入导出为JSON（建议设置完成后导出进行备份）。
 
 <img src="https://kiwi4814-1256211473.cos.ap-nanjing.myqcloud.com/img/image-20230201144115407.webp" alt="image-20230201144115407" style="zoom: 33%;" />
 
@@ -62,7 +58,9 @@ iTerm2最常用的主题是[Solarized](https://github.com/altercation/solarized)
 
 而Oh My Zsh 是一款社区驱动的命令行工具，正如它的主页上说的，Oh My Zsh 是一种生活方式。它基于 zsh 命令行，提供了主题配置，插件机制，已经内置的便捷操作。给我们一种全新的方式使用命令行。
 
-下面我们来逐步安装和配置oh-my-zsh。
+
+
+下面来逐步安装和配置oh-my-zsh。
 
 
 
@@ -102,7 +100,7 @@ sudo sh ./install.sh
 
 Powerline 是一个极棒的 Vim 编辑器的状态行插件，主要用于显示状态行和提示信息，适用于很多软件，比如 bash、zsh、tmux 等等。
 
-PowerLine是基于python开发的，所以我们需要使用pip安装，如果你的电脑里安装的事python2，那么命令为：
+PowerLine是基于python开发的，所以需要使用pip安装，如果你的电脑里安装的事python2，那么命令为：
 
 ```bash
 pip install powerline-status --user
@@ -184,11 +182,19 @@ cd ~/.oh-my-zsh/custom/plugins/
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git
 ```
 
+> 如果你使用的是 `Solarized Dark` 主题，并且使用深色壁纸的话，高亮显示的语法可能不是很清晰，这时候可以将修改配置项的值：
+>
+> （1）找到并编辑 `.oh-my-zsh/custom/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh`
+>
+> （2）修改 `ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=30'` 的配置值为30（默认是8） 
+>
+> <img src="https://kiwi4814-1256211473.cos.ap-nanjing.myqcloud.com/img/image-20230201164334524.webp" alt="image-20230201164334524" style="zoom:33%;" />
 
 
-安装完成后，我们需要编辑 `.zshrc` 配置文件来启用插件（与前面安装主题的步骤相同）。
 
-找到原本plugins的位置，将其替换为：
+安装完成后，需要编辑 `.zshrc` 配置文件来启用插件（与前面安装主题的步骤相同）。
+
+找到原本plugins的位置，将其替换为
 
 ```
 plugins=(
@@ -198,7 +204,11 @@ plugins=(
 )
 ```
 
-P：
+
+
+至此，关于iTerm2的安装和配置就大公告成了，最终效果如下（不喜欢彩虹图标以及各类配色的可以选择更简洁的主题或者配置）。
+
+<img src="https://kiwi4814-1256211473.cos.ap-nanjing.myqcloud.com/img/image-20230201164529759.webp" alt="image-20230201164529759" style="zoom:50%;" />
 
 ### 参考链接
 
