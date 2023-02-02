@@ -8,3 +8,8 @@
 
 📁 大小：15MB
 🏷 标签： #TVbox  #接口 #使用教程
+
+
+一个单纯接受手机投屏到电脑的接收端，无需安装，打开即用
+
+https://github.com/xfangfang/Macast/releases/tag/v0.7
