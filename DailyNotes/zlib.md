@@ -96,6 +96,7 @@ https://zlib.zu1k.com/
 当然也可以使用上方链接直接使用开发者部署好的使用
 
 搜索速度非常快，并且支持多个地址下载
+<<<<<<< HEAD
 
 ### 2022-12-30更新
 Z-Library 的旧机器人已被封禁，请使用新的 Telegram 机器人。目前新机器人功能和旧版相同，可以通过 Z-Library 网站发送书籍。
@@ -116,3 +117,5 @@ https://zbook.lol/
 https://zlib.pseudoyu.com/
 
 https://read.liugezhou.online/
+=======
+>>>>>>> 3c40427 (obsidian auto backup from macbook: 2022-12-26 17:34:16)
