@@ -1,3 +1,13 @@
+### 2023-02-09
+
+•[完整的chatgpt注册指南](http://telegra.ph/%E5%AE%8C%E6%95%B4ChatGPT%E6%B3%A8%E5%86%8C%E6%8C%87%E5%8D%97%E5%A6%82%E4%BD%95%E5%88%9B%E5%BB%BA%E4%B8%80%E4%B8%AA%E8%B4%A6%E6%88%B7-02-08)
+
+•[搭建chatgpt telegram bot教程](http://telegra.ph/OpenAI-ChatGPT-%E6%8E%A5%E5%85%A5Telegram-Bot%E6%8E%A2%E7%B4%A2AI%E7%9F%A5%E8%AF%86%E8%BE%B9%E7%95%8C-02-09)
+
+•[chatgpt-telegram-bot仓库](https://github.com/m1guelpf/chatgpt-telegram)
+
+### older
+
 chatGPT，拿下！
 教程：注册ChatGPT全攻略 (https://mirror.xyz/0x6E12A28086548B11dfcc20c75440E0B3c10721f5/9O9CSqyKDj4BKUIil7NC1Sa1LJM-3hsPqaeW_QjfFBc) 来自twitter网友的分享
 
