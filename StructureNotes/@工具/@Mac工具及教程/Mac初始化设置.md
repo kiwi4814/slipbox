@@ -173,3 +173,9 @@ Obsidian用来管理笔记，Typora用来写作。这两年市面上的笔记软
 #### Git
 
 - [x] 为不同项目文件夹设置git用户名和邮箱
+
+
+## 附录
+[Mac Setup for Web Development [2023]](https://www.robinwieruch.de/mac-setup-web-development/)  这篇文章主要讲述了如何在Mac系统上安装和配置Web开发环境。它包括了如何安装必要的软件，如Xcode、Homebrew、Visual Studio Code、Node.js、Git等，以及如何配置环境变量、创建基本的项目结构等。
+
+备份[[Mac Setup for Web Development（2023）]]
