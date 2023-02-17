@@ -1,0 +1,1 @@
+[我的个人微信也迅速接入了 ChatGPT - 掘金 (juejin.cn)](https://juejin.cn/post/7176813187705077816?)
