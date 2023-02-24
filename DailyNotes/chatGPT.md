@@ -1,4 +1,13 @@
+### 2023-02-24
 
+2022 年 9 月，谷歌公司的两个前员工，发布了一个叫做 [Character.ai](https://beta.character.ai/) 的网站，允许用户创建 "角色"，上传与该角色相关的资料，网站就会自动使用 AI 分析这些资料，生成该角色的聊天机器人，然后用户就可以跟它聊天了。
+
+现在，Character.ai 网站已经有几千个角色了，可以作为聊天对象。它的 App 都上架了，叫做 ["你好，历史"](https://www.hellohistory.ai/)（Hello History）。
+
+-   [GitHub code review bot](https://github.com/ruanyf/weekly/issues/2912)：每次提交代码，ChatGPT 自动 review。
+-   [cz-git](https://github.com/ruanyf/weekly/issues/2928)：使用 OpenAI 生成 git commit 提交信息。
+-   [ChatBot Feishu](https://github.com/ruanyf/weekly/issues/2927)：将 ChatGPT 接入飞书。
+-   [AI 换头像](https://github.com/ruanyf/weekly/issues/2901)：微信小程序，输入文字描述，自动生成头像图片。
 
 ### 2023-02-09
 
