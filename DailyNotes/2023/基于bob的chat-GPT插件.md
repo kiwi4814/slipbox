@@ -1,0 +1,1 @@
+[yetone/bob-plugin-openai-translator: 基于 OpenAI API (GPT-3) 的 Bob 翻译插件，让我们一起迎接不需要巴别塔的新时代！ (github.com)](https://github.com/yetone/bob-plugin-openai-translator)
