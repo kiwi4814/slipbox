@@ -3,7 +3,7 @@ Date: 2023-01-30 14:39:15
 ---
 - MetaData
 	- Date : 2023-01-30 14:39:15
-	- DailyNotes : [[2023-01-30_周一]]
+	- DailyNotes : [[2023-01-30_周一 1]]
 	- Link : [奇客Solidot | AutoHotkey v2 正式释出](https://www.solidot.org/story?sid=73979)
 	- Tag : #ZK卡片 #软件与工具 
 

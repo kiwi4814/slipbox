@@ -20,7 +20,7 @@
     
 -   [新品节](https://partner.steamgames.com/doc/marketing/upcoming_events/nextfest/2023oct)：10 月 9 日 - 16 日（PT）  
     
--   Steam 尖叫游戏节（万圣节）回归：10 月 26 日 - 11 月 2 日（PT）（更多详情日后公布）  
+-   Steam 尖叫游戏节（万圣节）回归：10 月 26 日 - 11 月 2 日（PT）
     
 -   秋季特卖：11 月 21 日 - 28 日（PT）（大型季节特卖）  
     
