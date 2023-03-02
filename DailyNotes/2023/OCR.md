@@ -1,0 +1,1 @@
+[lukas-blecher/LaTeX-OCR: pix2tex: Using a ViT to convert images of equations into LaTeX code. (github.com)](https://github.com/lukas-blecher/LaTeX-OCR)
