@@ -3,6 +3,7 @@
 ## 开放API
 [ChatGPT (freegpt.one)](https://freegpt.one/)
 
+[poe](https://poe.com/) quora出品的AI对话服务，可以使用Google Voice注册，能够理解中文，IOS用户还可以下载移动端。
 
 ### 其他
 
