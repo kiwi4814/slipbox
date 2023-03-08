@@ -1,6 +1,5 @@
 {
   "commitMessage": "obsidian manual commit from {{hostname}}: {{date}}",
-  "autoCommitMessage": "obsidian auto backup from {{hostname}}: {{date}}",
   "commitDateFormat": "YYYY-MM-DD HH:mm:ss",
   "autoSaveInterval": 100,
   "autoPushInterval": 0,
@@ -23,5 +22,8 @@
   "showedMobileNotice": true,
   "refreshSourceControlTimer": 7000,
   "showBranchStatusBar": false,
-  "setLastSaveToLastCommit": false
+  "setLastSaveToLastCommit": false,
+  "submoduleRecurseCheckout": false,
+  "gitDir": "",
+  "autoCommitMessage": "obsidian auto backup from {{hostname}}: {{date}}"
 }
