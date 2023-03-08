@@ -18,3 +18,4 @@ widgetsaiAI小部件
 关于定价：免费版支持嵌入一个及支持一个网站，不过这些AI功能本身基于open ai 需要key的付费或使用共享Key，个人版$19.99 每月，包括5个小部件
 
 地址：https://widgetsai.com
+
