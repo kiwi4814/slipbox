@@ -19,3 +19,22 @@ yum install -y wget && wget -O install.sh https://download.bt.cn/install/install
 ```
 
 日志：[[install.log]]
+
+## 重装
+
+## 初始化
+
+yum update
+yum install python3
+yum install wget
+yum install -y vim
+systemctl --version
+
+
+[[Centos7 防火墙]]
+
+[[安装oh-my-zsh]]
+
+[[安装Nginx]]
+
+
