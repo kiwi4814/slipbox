@@ -37,4 +37,6 @@ systemctl --version
 
 [[安装Nginx]]
 
+[[绑定二级域名到服务器]]
+
 
