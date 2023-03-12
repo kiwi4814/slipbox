@@ -10,15 +10,19 @@ bash <(curl -Lso- https://git.io/superspeed.sh)
 
 [[centos安装httpd配置简易下载服务器]]
 
+```
+systemctl stop httpd
+systemctl restart httpd
+```
 
 
-## 安装宝塔
+
+## 安装宝塔(已卸载)
 
 ```
 yum install -y wget && wget -O install.sh https://download.bt.cn/install/install_6.0.sh && sh install.sh ed8484bec
 ```
 
-日志：[[install.log]]
 
 ## 重装
 
@@ -38,5 +42,4 @@ systemctl --version
 [[安装Nginx]]
 
 [[绑定二级域名到服务器]]
-
 

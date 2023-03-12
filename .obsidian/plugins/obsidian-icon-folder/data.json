@@ -24,7 +24,6 @@
   "DailyNotes": "✉",
   "FleetingNotes": "🇮🇪",
   "ReadingNotes": "🇨🇳",
-  "Resources": "🧰",
   "StructureNotes": "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
   "Templates": "🇬🇹",
   "StructureNotes/@百科": "💯",
@@ -41,5 +40,6 @@
   "StructureNotes/@资源": "🖇",
   "FleetingNotes/网页剪藏": "✂",
   "LICENSE": "🟠",
-  "README.md": "🥠"
+  "README.md": "🥠",
+  "TodoNotes": "🧰"
 }

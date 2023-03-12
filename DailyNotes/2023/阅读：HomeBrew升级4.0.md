@@ -1,1 +1,0 @@
-[Homebrew 升级 4.0.0，麦金塔上的啤酒会更香吗？ - 少数派 (sspai.com)](https://sspai.com/post/78587)
