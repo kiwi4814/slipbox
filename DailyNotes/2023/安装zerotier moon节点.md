@@ -2,13 +2,13 @@
 
 
 
-## 前言
+## 一、前言
 
 
 
-## 下载和安装使用
+## 二、下载和安装使用
 
-### 注册
+### 2.1 注册
 
 在 [ZeroTier的官网](https://www.zerotier.com/) 注册一个账号，注册完成后会提示你 `Create A Network`:
 
@@ -26,25 +26,21 @@
 
 
 
-### 安装客户端
+### 2.2 安装客户端
 
-#### NAS
+#### 2.2.1 Windows
 
-<img src="https://kiwi4814-1256211473.cos.ap-nanjing.myqcloud.com//imgimage-20230313215750379.png" alt="image-20230313215750379" style="zoom: 25%;" />
+#### 2.2.2 Mac
 
+#### 2.2.3 Linux
 
+以centos为例，安装方法参见下一节中搭建moon节点的
 
-<img src="https://kiwi4814-1256211473.cos.ap-nanjing.myqcloud.com//imgimage-20230313215810370.png" alt="image-20230313215810370" style="zoom:25%;" />
-
-<img src="https://kiwi4814-1256211473.cos.ap-nanjing.myqcloud.com//imgimage-20230313215834793.png" alt="image-20230313215834793" style="zoom:25%;" />
-
-
-
-<img src="https://kiwi4814-1256211473.cos.ap-nanjing.myqcloud.com//imgimage-20230313215905188.png" alt="image-20230313215905188" style="zoom:25%;" />
+#### 2.2.4 NAS
 
 
 
-## 搭建和使用moon节点
+## 三、搭建和使用moon节点
 
 尽管 ZeroTier 是一个点对点的网络，但在网络中仍然需要至少一个中心节点来协调和管理网络中的设备，这个中心节点被称为 "moon" 节点。ZeroTier 虚拟网络默认情况下是使用 ZeroTier 公司的 Moon 节点来提供网络控制和管理功能，所以使用公共的 Moon 节点可能存在网络延迟和带宽限制等问题，如果你恰好有闲置的VPS或者静态服务器，可以搭建一个自己的 moon 节点来改善连接体验。
 
@@ -52,10 +48,10 @@
 
 系统： CentOS Linux release 7.9.2009
 
-### 搭建moon节点
+### 3.1 搭建moon节点
 本小节需要用到的变量值：`<NETWORK_ID>` 代表你的ZeroTier网络的ID（注册ZeroTier并创建网络后生成），`<SERVER_IP>` 代表你的公网服务器的IP
 
-#### VPS安装ZeroTier
+#### 3.1.1 VPS安装ZeroTier
 
 1. 一键安装 ZeroTier：
 
@@ -98,7 +94,7 @@
    200 info a4cf307835 1.10.5 ONLINE
    ```
 
-#### 配置 moon 节点
+#### 3.1.2 配置 moon 节点
 
 1. 生成 moon.json 配置文件，zerotier默认安装目录为 /var/lib/zerotier-one
 
@@ -132,14 +128,14 @@
 
    将配置文件中的 `"stableEndpoints": []` 修改成 `"stableEndpoints": ["<SERVER_IP>/9993"]`，将 `<SERVER_IP>` 替换成云服务器的公网 IP。
 
-3. 开放9993 UDP端口
+3. 开放 9993 UDP端口
 
    ```bash
    sudo firewall-cmd --permanent --add-port=9993/udp
    sudo firewall-cmd --reload
    ```
 
-   这步骤也可以自己修改成自己想要的端口，在安装目录下创建 local.conf 文件，文件内容配置如下，primaryPort 即为想要配置的端口:
+   这步骤也可以自己修改成自己想要的端口，在安装目录下创建 local.conf 文件，文件内容配置如下，primaryPort 即为想要配置的端口：
 
    ```json
    {
@@ -174,7 +170,7 @@
 
    
 
-#### 其他设备使用此 Moon 节点
+### 3.2 其他设备使用此 Moon 节点
 
 网络内的其他成员使用 moon 节点有两种方法， 第一种方法是在安装目录下创建 `moons.d` 文件夹，然后将刚才生成的 `00000xxxxxxxxxx.moon` 复制到文件夹内，然后重启zerotier。
 
@@ -191,7 +187,9 @@ FreeBSD/OpenBSD: /var/db/zerotier-one
 
 第二种方法较为简单，在加入同一个网络后使用 `zerotier-cli orbit` 命令直接添加 Moon 节点 ID。
 
-Linux系统：
+
+
+Linux内核（群晖NAS、Mac、CentOS等）：
 
 ```bash
 sudo zerotier-cli orbit xxxxxxxxxx xxxxxxxxxx
@@ -209,7 +207,7 @@ zerotier-cli.bat orbit xxxxxxxxxx xxxxxxxxxx
 
 **无论哪种方式，完成后可以执行下面的命令检查是否加入成功**：
 
-Linux内核执行：
+Linux内核（群晖NAS、Mac、CentOS等）执行：
 
 ```bash
 sudo zerotier-cli listpeers 
