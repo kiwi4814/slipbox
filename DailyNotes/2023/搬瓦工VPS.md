@@ -34,6 +34,9 @@ yum install wget
 yum install -y vim
 systemctl --version
 
+#### 列出所有端口及使用情况
+
+netstat -ntlp
 
 [[Centos7 防火墙]]
 
