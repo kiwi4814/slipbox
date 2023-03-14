@@ -46,4 +46,4 @@ netstat -ntlp
 
 [[绑定二级域名到服务器]]
 
-[[安装zerotier moon节点]]
+[[使用ZeroTier实现内网穿透教程]]
