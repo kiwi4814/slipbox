@@ -20,7 +20,15 @@
 
 点击记录进入详情后，我们可以看到  `Settings`、`Members`、 `Flow Rules`、 `Administrators` 四个配置，我们一般只需要关心前两项即可。
 
-`Settings` 中我们可以设置网络的名称、描述和权限（私有or公有），按需设置即可，我们重点讲讲 `Members`。
+`Settings` 中我们可以设置网络的名称、描述和权限（私有or公有），在 `Settings -> Advanced` 中我们可以选择局域网IP的号段，我们重点讲讲 `Members`。
+
+<img src="https://kiwi4814-1256211473.cos.ap-nanjing.myqcloud.com/img/image-20230314120947302.webp" alt="image-20230314120947302" style="zoom:50%;" />
+
+
+
+如上图所示，这里会实时展示所有加入此网络的列表，勾选Auth列的复选框并且状态为Online后，则表示这些主机已经组成了一个局域网，局域网IP的号段可以在 `Settings -> Advanced` 中自由选择。
+
+<img src="https://kiwi4814-1256211473.cos.ap-nanjing.myqcloud.com/img/image-20230314121316970.webp" alt="image-20230314121316970" style="zoom:50%;" />
 
 
 
@@ -29,6 +37,8 @@
 ### 2.2 安装客户端
 
 #### 2.2.1 Windows
+
+### 配置
 
 #### 2.2.2 Mac
 
