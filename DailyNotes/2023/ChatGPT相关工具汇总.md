@@ -1,5 +1,8 @@
 ## 相关文章
 [[支持chatGPT的优秀软件]]
+
+[[Awesome ChatGPT API]]
+
 ## PDF
 [ChatPDF - Chat with any PDF!](https://www.chatpdf.com/)
 ## 开放API
@@ -21,3 +24,34 @@ widgetsaiAI小部件
 
 地址：https://widgetsai.com
 
+
+
+## 翻译
+
+🔍 **或许是最佳的 OpenAI 使用场景 ——** [**OpenAI Translator**](https://github.com/yetone/openai-translator/blob/main/README-CN.md)
+
+
+
+☝️ 如果说到 AI 擅长的工作，翻译一定是其中最能让人信服的一项。OpenAI Translator 就是一个可以让你体验 AI 翻译的服务，它具有以下特性：
+
+
+
+🔹 支持三种翻译模式：翻译、润色、总结；
+
+🔹 支持 55 种语言的相互翻译、润色和总结功能；
+
+🔹 支持实时翻译、润色和总结，以最快的速度响应用户，让翻译、润色和总结的过程达到前所未有的流畅和顺滑；
+
+🔹 支持自定义翻译文本；
+
+🔹 支持一键复制；
+
+🔹 支持 TTS；
+
+🔹 有桌面端应用，全平台（Windows + macOS + Linux）支持；
+
+🔹 支持 [Chrome 商店](https://chrome.google.com/webstore/detail/openai-translator/ogjibjphoadhljaoicdnjnmgokohngcc) 直接为你的浏览器安装拓展程序。
+
+
+
+💻 作为一个既可以用于浏览器又可以作为独立 App 使用的项目，OpenAI Translator 做的确实不错，你只需要自行申请一个 OpenAI API Key 并拥有一个能够使用 OpenAI 的网络环境即可使用，感兴趣的朋友可以前往 [GitHub](https://github.com/yetone/openai-translator) 项目页面浏览更多。
