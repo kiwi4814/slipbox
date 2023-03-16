@@ -55,3 +55,7 @@
 ## 项目链接
 
 [https://github.com/hua1995116/awesome-ai-painting](https://github.com/hua1995116/awesome-ai-painting)
+
+
+
+find . \( -name "constant" -o -name "param"  -o -name "params"  -o -name "model" -o -name "enums" \) -type d
