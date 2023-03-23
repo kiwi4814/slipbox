@@ -6,6 +6,18 @@ Date: 2022-01-03 21:32:04
 	- DailyNotes : [[2022-01-03_周一]]
 	- Link : 
 	- Tag : #ZK卡片 #Hugo #个人博客 #Hugo主题
+## 2023
+
+### ICS
+
+[shenweiyan/ICS-Hugo-Theme](https://github.com/shenweiyan/ICS-Hugo-Theme)
+
+Demo：https://shen.bioitee.com/
+
+git submodule add --depth=1 https://github.com/kiwi4814/hugo-PaperModX.git themes/PaperModX
+
+============以下为2022年收集============
+
 ## 感觉还不错的
 
 1. MEME（当前在用）
