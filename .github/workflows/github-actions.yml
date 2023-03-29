@@ -14,10 +14,14 @@ jobs:
         with:
           repository: kiwi4814/slipbox
           ref: master
+          path: slipbox
+          fetch-depth: 0
       - name: Checkout blogs
         uses: actions/checkout@v2
         with:
           repository: kiwi4814/blogs
+          path: blogs
+          fetch-depth: 0
       - name: Sync files
         run: ls
 
