@@ -23,6 +23,6 @@ jobs:
           sudo apt-get install -y python3-pip
           pip3 install pyyaml
       - name: Sync files
-        run: python3 /github/workspace/sync.py
+        run: python3 kiwi4814/slipbox/sync.py
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
