@@ -58,9 +58,11 @@ jobs:
           git config user.email "m4814@qq.com"
           git add -A
           git commit -m "Publish new posts"
-          git status
-      - name: Push changes
+          
+      - name: Push changes #push files into master branch
+        if: ${{ success() }}
         uses: ad-m/github-push-action@master
         with:
+          BRANCH: master
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          repository: kiwi4814/blogs
+          force: true  
