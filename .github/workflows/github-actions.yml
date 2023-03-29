@@ -62,3 +62,4 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           repository: kiwi4814/blogs
           branch: ${{ github.ref }}
+          github_url: https://github.com/kiwi4814/blogs
