@@ -5,13 +5,11 @@
     "fontSize": 16,
     "iconColor": null,
     "recentlyUsedIcons": [
-      "🟠",
-      "🥠",
-      "💟",
-      "🔶",
-      "😈"
+      "🍨",
+      "🇮🇴",
+      "🟠"
     ],
-    "recentlyUsedIconsSize": 5,
+    "recentlyUsedIconsSize": 8,
     "rules": [],
     "extraMargin": {
       "top": 0,
@@ -19,9 +17,9 @@
       "bottom": 0,
       "left": 0
     },
-    "emojiStyle": "none"
+    "emojiStyle": "twemoji"
   },
-  "DailyNotes": "✉",
+  "DailyNotes": "🇮🇴",
   "FleetingNotes": "🇮🇪",
   "ReadingNotes": "🇨🇳",
   "StructureNotes": "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
@@ -39,7 +37,7 @@
   "StructureNotes/@游戏": "🎲",
   "StructureNotes/@资源": "🖇",
   "FleetingNotes/网页剪藏": "✂",
-  "LICENSE": "🟠",
-  "README.md": "🥠",
+  "LICENSE": "😈",
+  "README.md": "🍨",
   "TodoNotes": "🧰"
 }
