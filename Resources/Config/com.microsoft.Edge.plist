@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <!-- 政策名称 -->
+  <key>ExtensionInstallAllowlist</key>
+  <!-- 值类型为数组 -->
+  <array>
+    <!-- 数组内元素为字符串扩展 ID，一行一个 -->
+    <string>dcpihecpambacapedldabdbpakmachpb</string>
+  </array>
+  <!-- 强制安装的应用和扩展程序的列表 -->
+  <!-- 如果浏览器提示扩展不安全，可通过该项强制锁定浏览器强制禁用扩展功能 -->
+  <key>ExtensionInstallForcelist</key>
+  <array>
+    <string>dcpihecpambacapedldabdbpakmachpb</string>
+  </array>
+  <!-- 额外政策，此处示例为「允许或拒绝屏幕截图」，可删掉 -->
+  <key>ScreenCaptureAllowed</key>
+  <!-- 值类型为 bool，此处设置为 false，true 则是 <true /> -->
+  <false />
+</dict>
+</plist>

@@ -3,7 +3,7 @@
   "alwaysUpdateLinks": true,
   "showLineNumber": false,
   "trashOption": "system",
-  "attachmentFolderPath": ".//assets",
+  "attachmentFolderPath": "Resources",
   "showUnsupportedFiles": true,
   "newFileLocation": "current",
   "pdfExportSettings": {
