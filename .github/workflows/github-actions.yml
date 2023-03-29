@@ -46,6 +46,7 @@ jobs:
             file_name=$(basename "$f")
             echo "- $year/$file_name" >> blogs/update.log
           done < /tmp/files-to-copy.txt
+          cat /tmp/files-to-copy.txt
 
       - name: Commit changes and push to blogs repo
         if: success()
@@ -55,8 +56,4 @@ jobs:
           git config user.email "m4814@qq.com"
           git add -A
           git commit -m "Publish new posts"
-
-      - name: Push changes
-        uses: ad-m/github-push-action@master
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          git status
