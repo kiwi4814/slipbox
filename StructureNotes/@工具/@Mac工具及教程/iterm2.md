@@ -203,7 +203,7 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git
 ```
 plugins=(
      git
-     zsh-autosuggestions
+     zsh-autosuggestiogit
      zsh-syntax-highlighting 
 )
 ```
