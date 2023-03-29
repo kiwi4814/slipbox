@@ -27,8 +27,9 @@ for subdir, _, files in os.walk('.'):
 
 # upload changed files to blogs repository
 repo = g.get_repo('kiwi4814/blogs')
-posts_folder = os.path.join(repo.get_contents('content').path, 'posts', today_year)
-os.makedirs(posts_folder, exist_ok=True)
+posts_folder = "content/posts/2023"
+# posts_folder = os.path.join(repo.get_contents('content').path, 'posts', today_year)
+# os.makedirs(posts_folder, exist_ok=True)
 for file_path in changed_files:
     file_name = os.path.basename(file_path)
     target_path = os.path.join(posts_folder, file_name)

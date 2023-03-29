@@ -10,14 +10,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout slipbox
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         with:
           repository: kiwi4814/slipbox
           ref: master
           path: slipbox
           fetch-depth: 0
       - name: Checkout blogs
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         with:
           repository: kiwi4814/blogs
           path: blogs
