@@ -48,7 +48,7 @@ jobs:
           done < /tmp/files-to-copy.txt
           cat /tmp/files-to-copy.txt
 
-      - name: Commit changes and push to blogs repo
+      - name: Commit changes
         if: ${{ success() }}
         run: |
           cd blogs
