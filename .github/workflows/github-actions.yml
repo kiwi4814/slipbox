@@ -1,0 +1,58 @@
+name: Publish to Blogs
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  publish-to-blogs:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check files
+        run: |
+          git diff --name-only HEAD^ HEAD |
+            grep '\.md$' |
+            xargs grep -l '^draft:\s*false' |
+            tee /tmp/files-to-copy.txt
+
+      - name: Copy files to blogs repo
+        uses: actions/checkout@v3
+        with:
+          ref: 'main'
+          repository: kiwi4814/blogs
+          path: blogs
+
+      - name: Copy files
+        run: |
+          while read f; do
+            year=$(date +"%Y")
+            file_name=$(basename "$f")
+            target_dir="blogs/content/posts/$year"
+
+            mkdir -p "$target_dir"
+            rm -rf "$target_dir/$file_name"
+            cp "$f" "$target_dir"
+          done < /tmp/files-to-copy.txt
+
+      - name: Update log file
+        if: success()
+        run: |
+          year=$(date +"%Y")
+          timestamp=$(date +"%Y-%m-%d %H:%M:%S")
+          echo "Update at $timestamp:" >> blogs/update.log
+          while read f; do
+            file_name=$(basename "$f")
+            echo "- $year/$file_name" >> blogs/update.log
+          done < /tmp/files-to-copy.txt
+
+      - name: Commit changes and push to blogs repo
+        if: success()
+        run: |
+          cd blogs
+          git config user.name "kiwi4814"
+          git config user.email "m4814@qq.com"
+          git add -A
+          git commit -m "Publish new posts"
+          git push origin main
