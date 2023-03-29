@@ -54,7 +54,8 @@ jobs:
           cd blogs
           git config --local user.name "kiwi4814"
           git config --local user.email "m4814@qq.com"
-          git commit -a -m "Publish new posts"
+          git add -a
+          git commit -m "Publish new posts"
 
       - name: Push changes
         if: ${{ success() }}
