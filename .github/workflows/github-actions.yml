@@ -58,3 +58,7 @@ jobs:
           git add -A
           git commit -m "Publish new posts"
           git status
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
