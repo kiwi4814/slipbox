@@ -1,4 +1,4 @@
-name: Sync slipbox with blogs
+name: Publish to Blogs
 
 on:
   push:
@@ -6,31 +6,57 @@ on:
       - master
 
 jobs:
-  sync:
+  publish-to-blogs:
     runs-on: ubuntu-latest
+
     steps:
-      - name: Checkout slipbox
+      - name: Check files
+        run: |
+          git diff --name-only HEAD^ HEAD |
+            grep '\.md$' |
+            xargs grep -l '^draft:\s*false' |
+            tee /tmp/files-to-copy.txt
+
+      - name: Copy files to blogs repo
         uses: actions/checkout@v3
         with:
-          repository: kiwi4814/slipbox
-          ref: master
-          path: slipbox
-          fetch-depth: 0
-      - name: Checkout blogs
-        uses: actions/checkout@v3
-        with:
+          ref: 'main'
           repository: kiwi4814/blogs
           path: blogs
-          fetch-depth: 0
-      - name: Install requirements
+
+      - name: Copy files
         run: |
-          sudo apt-get update
-          sudo apt-get install -y python3-pip
-          pip3 install pyyaml
-          pip3 install pygithub
-      - name: Sync files
-        run: python3 slipbox/sync.py
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          while read f; do
+            year=$(date +"%Y")
+            file_name=$(basename "$f")
+            target_dir="blogs/content/posts/$year"
 
+            mkdir -p "$target_dir"
+            rm -rf "$target_dir/$file_name"
+            cp "$f" "$target_dir"
+          done < /tmp/files-to-copy.txt
 
+      - name: Update log file
+        if: success()
+        run: |
+          year=$(date +"%Y")
+          timestamp=$(date +"%Y-%m-%d %H:%M:%S")
+          echo "Update at $timestamp:" >> blogs/update.log
+          while read f; do
+            file_name=$(basename "$f")
+            echo "- $year/$file_name" >> blogs/update.log
+          done < /tmp/files-to-copy.txt
+
+      - name: Commit changes and push to blogs repo
+        if: success()
+        run: |
+          cd blogs
+          git config user.name "kiwi4814"
+          git config user.email "m4814@qq.com"
+          git add -A
+          git commit -m "Publish new posts"
+
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
