@@ -1,21 +1,19 @@
 ---
-Date : 2023-03-29 15:18:55
-DailyNotes : [[2023-03-29_周三]]
-Link : [基于 macOS 的 Chrome 以及 Edge 浏览器政策 / 策略配置](https://blog.csdn.net/maxsky/article/details/120205535)
-Tag : #ZK卡片 #Edge #Mac
+title: Edge浏览器安装未上架的crx插件
+date: 2023-03-29T15:18:55.000
+slug: /edge-crx
+draft: false
+tags:
+  - edge
+  - 软件
+categories:
+  - 软件教程
+series:
+  - 疑难杂症
+enableTOC: false
+link: https://blog.csdn.net/maxsky/article/details/120205535
+tag: #ZK卡片 #Edge #软件
 ---
-
-+++
-title = "Edge浏览器安装未上架的crx插件.md"
-date =  2023-03-29 15:18:55
-slug = "/edge-crx"
-draft = true
-tags = ["edge","软件"]
-categories = ["软件教程"]
-series = ["疑难杂症"]
-enableTOC = false
-
-+++
 
 
 
