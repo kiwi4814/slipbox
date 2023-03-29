@@ -53,6 +53,7 @@ jobs:
         run: |
           ls
           cd blogs
+          ls
           git config user.name "kiwi4814"
           git config user.email "m4814@qq.com"
           git add -A
