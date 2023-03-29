@@ -13,10 +13,18 @@ jobs:
         uses: actions/checkout@v2
         with:
           repository: kiwi4814/slipbox
+          ref: master
       - name: Checkout blogs
         uses: actions/checkout@v2
         with:
           repository: kiwi4814/blogs
-      - name: pwd
-        run: pwd
+      - name: Install requirements
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y python3-pip
+          pip3 install pyyaml
+      - name: Sync files
+        run: python3 sync.py
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
