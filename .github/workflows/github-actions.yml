@@ -37,7 +37,7 @@ jobs:
           done < /tmp/files-to-copy.txt
 
       - name: Update log file
-        if: success()
+        if: ${{ success() }}
         run: |
           year=$(date +"%Y")
           timestamp=$(date +"%Y-%m-%d %H:%M:%S")
@@ -49,20 +49,17 @@ jobs:
           cat /tmp/files-to-copy.txt
 
       - name: Commit changes and push to blogs repo
-        if: success()
+        if: ${{ success() }}
         run: |
-          ls
           cd blogs
-          ls
-          git config user.name "kiwi4814"
-          git config user.email "m4814@qq.com"
-          git add -A
-          git commit -m "Publish new posts"
-          
-      - name: Push changes #push files into master branch
+          git config --local user.name "kiwi4814"
+          git config --local user.email "m4814@qq.com"
+          git commit -a -m "Publish new posts"
+
+      - name: Push changes
         if: ${{ success() }}
         uses: ad-m/github-push-action@master
         with:
-          BRANCH: master
+          branch: master
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          force: true  
+          force: true
