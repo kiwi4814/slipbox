@@ -16,7 +16,9 @@ jobs:
             grep '\.md$' |
             xargs grep -l '^draft:\s*false' |
             tee /tmp/files-to-copy.txt
-      - uses: actions/checkout@v3
+
+      - name: Copy files to blogs repo
+        uses: actions/checkout@v3
         with:
           ref: 'main'
           repository: kiwi4814/blogs
@@ -48,8 +50,6 @@ jobs:
           cat /tmp/files-to-copy.txt
 
       - name: Commit changes
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
         if: ${{ success() }}
         run: |
           cd blogs
