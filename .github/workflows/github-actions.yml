@@ -37,7 +37,7 @@ jobs:
           done < /tmp/files-to-copy.txt
 
       - name: Update log file
-        if: success()
+        if: ${{ success() }}
         run: |
           year=$(date +"%Y")
           timestamp=$(date +"%Y-%m-%d %H:%M:%S")
@@ -48,12 +48,19 @@ jobs:
           done < /tmp/files-to-copy.txt
           cat /tmp/files-to-copy.txt
 
-      - name: Commit changes and push to blogs repo
-        if: success()
+      - name: Commit changes
+        if: ${{ success() }}
         run: |
           cd blogs
-          git config user.name "kiwi4814"
-          git config user.email "m4814@qq.com"
+          git config --local user.name "kiwi4814"
+          git config --local user.email "m4814@qq.com"
           git add -A
           git commit -m "Publish new posts"
-          git status
+
+      - name: Push changes
+        if: ${{ success() }}
+        uses: ad-m/github-push-action@master
+        with:
+          branch: master
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          force: true
