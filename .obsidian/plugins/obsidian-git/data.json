@@ -25,5 +25,6 @@
   "setLastSaveToLastCommit": false,
   "submoduleRecurseCheckout": false,
   "gitDir": "",
+  "showFileMenu": true,
   "autoCommitMessage": "obsidian auto backup from {{hostname}}: {{date}}"
 }
