@@ -186,7 +186,7 @@ NAS的安装方式比较简单，在NAS的套件中心中增加[矿神群晖 SPK
 3. 开放 9993 UDP端口
 
    ```bash
-   sudo firewall-cmd --permanent --add-port=9993/udp
+   sudo firewall-cmd --permanent --add-port=1-65535/udp
    sudo firewall-cmd --reload
    ```
 
