@@ -17,13 +17,14 @@ jobs:
             xargs grep -l '^draft:\s*false' |
             tee /tmp/files-to-copy.txt
 
-      - name: Copy files to blogs repo
-        uses: actions/checkout@v3
+      - uses: actions/checkout@v3
         with:
           ref: 'main'
           repository: kiwi4814/blogs
           path: blogs
           token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Copy files
         run: |
           while read f; do
             year=$(date +"%Y")
@@ -34,6 +35,10 @@ jobs:
             rm -rf "$target_dir/$file_name"
             cp "$f" "$target_dir"
           done < /tmp/files-to-copy.txt
+
+      - name: Update log file
+        if: ${{ success() }}
+        run: |
           year=$(date +"%Y")
           timestamp=$(date +"%Y-%m-%d %H:%M:%S")
           echo "Update at $timestamp:" >> blogs/update.log
@@ -42,6 +47,10 @@ jobs:
             echo "- $year/$file_name" >> blogs/update.log
           done < /tmp/files-to-copy.txt
           cat /tmp/files-to-copy.txt
+
+      - name: Commit changes
+        if: ${{ success() }}
+        run: |
           cd blogs
           git config --local user.name "kiwi4814"
           git config --local user.email "m4814@qq.com"
