@@ -1,0 +1,5 @@
+- 修改heimdall
+- 修改qiandao mysql路径
+- 修改frpc
+- 修改群晖网盘同步路径
+- 修改 PT-plugin配置
