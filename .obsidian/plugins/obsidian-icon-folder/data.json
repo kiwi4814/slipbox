@@ -19,7 +19,8 @@
       "bottom": 0,
       "left": 0
     },
-    "emojiStyle": "twemoji"
+    "emojiStyle": "twemoji",
+    "iconInTabsEnabled": false
   },
   "DailyNotes": "🇮🇴",
   "FleetingNotes": "🇮🇪",
