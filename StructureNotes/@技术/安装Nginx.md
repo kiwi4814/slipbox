@@ -42,3 +42,8 @@ Linux 版本： CentOS Linux release 7.9.2009
    ````
 
 在浏览器中输入服务器的 IP 地址，以查看 nginx 默认页面。默认页面的位置是 /usr/share/nginx/html/index.html。
+
+
+
+### 安装stream
+[Nginx Stream 配置 | 程序员莫语 (junmoyu.com)](https://blog.junmoyu.com/posts/linux-nginx-install-stream/)
