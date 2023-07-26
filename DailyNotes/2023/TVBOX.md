@@ -210,3 +210,47 @@ APP下载主页：https://www.yydsys.top/box/
 
 📁 大小：15MB
 🏷 标签： #TVbox  #接口 #使用教程
+
+### 20230726更新
+影视 TV 是一款基于猫影视开源的 CatVodTVJarLoader 项目，从零开始编写。界面简洁清爽且功能强大。界面上采用 Android TV Leanback 架构，播放器采用最新版 EXO 及 IJK 开源专案的智能电视软件，使用体验感舒适，支持电视直播功能，界面非常简洁，没有花里胡哨的内容。这个版本最大的特色就是可以自动跳过失效的地址，选择最好的接口进行播放，TVbox 类的众多软件版本中，影视 TV 是唯一支持该项功能的！软件本身是一个空壳，需要自己配置接口地址。
+原文链接：[最新 TVbox 蜂蜜版 (omii.top)](https://omii.top/99.html)
+专题地址：[影视 TV 专题 - OMii](https://omii.top/web/%E5%BD%B1%E8%A7%86/)
+
+下载地址：[影视 TV (lanzoue.com)](https://padx.lanzoue.com/b01egp0uh) 6zom
+
+订阅链接：
+http://我不是.肥猫.love:63/接口禁止贩卖
+
+http://饭太硬.top/tv
+
+https://yydsys.top/duo
+
+https://agit.ai/Yoursmile7/TVBox/raw/branch/master/XC.json
+
+https://神器每日推送.tk/pz.json
+
+http://101.34.67.237/config/2
+
+https://tvbox.cainisi.cf
+
+http://home.jundie.top:81/top98.json
+
+https://maoyingshi.cc/tvbox/云星日记/1.m3u8
+
+http://xhww.fun:63/小米/DEMO.json
+
+https://ghproxy.com/raw.githubusercontent.com/FongMi/CatVodSpider/main/json/config.json
+
+http://pandown.pro/tvbox/tvbox.json
+
+![图片[5]-最新TVbox蜂蜜版](https://kiwi4814-1256211473.cos.ap-nanjing.myqcloud.com/img/sawr0v-0.webp)
+
+电视Java版64位：leanback-java-arm64_v8a
+电视Java版32位：leanback-java-armeabi_v7a
+手机Java版64位：mobile-java-arm64_v8a
+手机Java版32位：mobile-java-armeabi_v7a
+
+电视Python版64位：leanback-python-arm64_v8a
+电视Python版32位：leanback-python-armeabi_v7a
+手机Python版64位：mobile-python-arm64_v8a
+手机Python版32位：mobile-python-armeabi_v7a
