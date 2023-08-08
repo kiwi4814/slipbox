@@ -56,3 +56,58 @@ public class JqxxLlxxVO {
 
 然后我现在得到了多个List<JqxxLlxxVO>，分别是list1，list2，list3。然后我需要将这个list进行合并，最终想要得到的结果是一个Map<String,JqxxLlxxVO> listToMap ，其中listToMap的key是JqxxLlxxVO对象中的master_jqbh，而value是一个把所有重复key的属性进行合并后的JqxxLlxxVO对象，合并的时候规则是后来的不为null也不为0的属性会覆盖掉前面的属性，请问我这个需求在java8中有没有优雅的实现方式？
 
+
+我现在在kibana里面实现了一个查询，查询语句如下：
+```json
+GET app_log/_search
+{
+  "query": {
+    "bool": {
+      "must": [
+        {
+          "term": {
+            "logType": {
+              "value": "03"
+            }
+          }
+        },
+        {
+          "term": {
+            "userName": {
+              "value": "iacs-hqf"
+            }
+          }
+        }
+      ]
+    }
+  },
+  "size": 0,
+  "aggs": {
+    "code": {
+      "terms": {
+        "field": "moduleCode",
+        "order": {
+          "max": "desc"
+        },
+        "size": 10
+      },
+      "aggs": {
+        "max": {
+          "max": {
+            "script": {
+              "inline": "Object time = doc.operateTime.value;if(time instanceof String){SimpleDateFormat format = new SimpleDateFormat('yyyy-MM-dd HH:mm:ss');return format.parse(doc.operateTime.value).getTime();}else{return time;}"
+            }
+          }
+        },
+        "top": {
+          "top_hits": {
+            "size": 1
+          }
+        }
+      }
+    }
+  }
+}
+```
+
+上面的查询是从日志中查询出指定用户最近访问的五个标签，不能重复，所以按照moduleCode分组统计了，这个功能的查询目前按照这样写已经实现了，但我现在需要的是在Java中实现这个查询，我Java的版本是JDK8，ES的版本是6.8，使用的客户端是java high level rest client，能麻烦您帮我写一下Java代码的实现吗
