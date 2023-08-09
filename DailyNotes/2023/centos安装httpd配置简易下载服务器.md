@@ -244,3 +244,66 @@ Hint: Some lines were ellipsized, use -l to show in full.
 之后添加文件到 `/usr/httpd/file`，输入服务器的 ip 地址就可以查看所有的文件
 
 ![](https://kiwi4814-1256211473.cos.ap-nanjing.myqcloud.com/img/8f31f2d4889b4d50bb0b823437812e35~tplv-k3u1fbpfcp-zoom-in-crop-mark:4536:0:0:0.awebp)
+
+
+
+
+
+### 配置webdav
+
+```shell
+vim /etc/httpd/conf/httpd.conf
+# 在最后添加-指定webdav的配置文件路径
+Include conf/webdav.conf
+```
+
+增加配置文件
+
+```csharp
+vim /etc/httpd/conf/webdav.conf
+
+# 增加下列内容
+
+<IfModule mod_dav.c>
+    LimitXMLRequestBody 131072
+    Alias /webdav "/var/www/webdav"
+    <Directory /var/www/webdav>
+        Dav On
+        Options +Indexes
+        IndexOptions FancyIndexing
+        AddDefaultCharset UTF-8
+        AuthType Basic
+        AuthName "WebDAV Server"
+        AuthUserFile /etc/httpd/webdav.users.pwd
+        Require valid-user
+        Order allow,deny
+        Allow from all
+    </Directory>
+</IfModule>
+```
+
+创建访问目录
+
+```csharp
+mkdir -p /var/www/webdav
+# 赋权限
+chown apache:apache /var/www/webdav
+```
+
+创建和删除用户
+
+```bash
+# user01是用户名，命令行会提示输入2次密码
+htpasswd -c /etc/httpd/webdav.users.pwd user01
+
+# 删除用户
+htpasswd -D /etc/httpd/webdav.users.pwd user01
+```
+
+重启
+
+```
+systemctl restart httpd
+```
+
+访问：http://ip/webdav
