@@ -61,6 +61,8 @@ Obsidian用来管理笔记，Typora用来写作。这两年市面上的笔记软
 
 这类软件一般是辅助作用，让电脑变得更好用，一般是能够极大的提高我的工作和学习效率的。
 
+ 
+
 #### ScrollReverser
 
 在接外接显示器工作的时候，我还是喜欢接上鼠标和键盘进行工作，我们知道一般用鼠标的和用触控板的习惯是相反的，拿一篇长文来说，触控板是自然滚动，类似手机触屏，手往上滑动内容自然往下滚动，而鼠标是滚轮往下滑动，内容跟着往下滑动，这时候如果经常在鼠标和触控板之间切换的话，就很不方便，这款软件就是可以让你随心所欲的调整滚动的方向。
@@ -174,8 +176,18 @@ Obsidian用来管理笔记，Typora用来写作。这两年市面上的笔记软
 
 - [x] 为不同项目文件夹设置git用户名和邮箱
 
+### HomeBrew
+
+quicklook插件
+
+```
+brew install qlcolorcode qlstephen qlmarkdown quicklook-json qlimagesize suspicious-package apparency quicklookase qlvideo
+```
+
+
 
 ## 附录
+
 [Mac Setup for Web Development [2023]](https://www.robinwieruch.de/mac-setup-web-development/)  这篇文章主要讲述了如何在Mac系统上安装和配置Web开发环境。它包括了如何安装必要的软件，如Xcode、Homebrew、Visual Studio Code、Node.js、Git等，以及如何配置环境变量、创建基本的项目结构等。
 
 备份[[Mac Setup for Web Development（2023）]]
