@@ -12,8 +12,6 @@
 
 通用  - 共享
 
-
-
 ## 必装软件
 
 ### 开发类
@@ -42,8 +40,6 @@ Edge浏览器
 
 ClashForWindows
 
-
-
 ### 服务
 
 Docker or OrbStack
@@ -52,22 +48,20 @@ Docker-Alist
 
 Emby
 
-初始化 SMB 硬盘
+初始化 SMB 硬盘 - AutoMounter
 
-
-
-
+- smb写文件夹名称
 
 ## 日志
 
 鼠标 - 自然滚动
 
-#### edge
+#### Edge
 
 搜索引擎改为google
 
 默认浏览器
 
-#### clash for windows
+Clash for windows
 
 ressetle
